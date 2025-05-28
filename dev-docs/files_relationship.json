@@ -1,15 +1,38 @@
 {
   "docusaurus/docs/cms/admin-panel-customization/homepage.md": {
-    "downstream_files": [],
-    "commits": []
+    "downstream_files": [
+      "docusaurus/docs/cms/admin-panel-customization/homepage.md"
+    ],
+    "commits": [
+      "a0424db69be217995c2c55b7d83c2b527d6c4c62"
+    ]
   },
   "docusaurus/docs/cms/configurations/features.md": {
-    "downstream_files": [],
-    "commits": []
+    "downstream_files": [
+      "docusaurus/docs/cms/configurations/features.md",
+      "docusaurus/docs/cms/features/admin-panel.md"
+    ],
+    "commits": [
+      "eba970e24afdd3da265cae91a3986756a076bcc4",
+      "1313130be776474423f2ebc979cb385097c60bba",
+      "a0424db69be217995c2c55b7d83c2b527d6c4c62"
+    ]
   },
   "docusaurus/docs/cms/features/admin-panel.md": {
-    "downstream_files": [],
-    "commits": []
+    "downstream_files": [
+      "docusaurus/docs/cms/configurations/features.md",
+      "docusaurus/docs/cms/features/admin-panel.md"
+    ],
+    "commits": [
+      "eba970e24afdd3da265cae91a3986756a076bcc4",
+      "27e2d42b89d77b9919e26da41bb246ef75adee06",
+      "7a6db213ebcba70a56afb672afc484380f08655b",
+      "87e9896fbf7b97da48d8873e4dae78833a364959",
+      "3a2382d10217c753b268fc9715e82b2581469b68",
+      "f8944a2c2c9522856288f5882e728be7aeffc519",
+      "a0424db69be217995c2c55b7d83c2b527d6c4c62",
+      "41524ec95dbbbfd2a387d8d48b2d314fe20e5713"
+    ]
   },
   "docusaurus/sidebars.js": {
     "downstream_files": [],
