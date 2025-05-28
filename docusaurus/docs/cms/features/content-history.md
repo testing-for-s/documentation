@@ -1,12 +1,14 @@
 ---
 title: Content History
-description: Learn how you can use the Content History feature of Strapi 5 to browse and restore previous versions of documents from the Content Manager.
+description: >-
+  Learn how you can use the Content History feature of Strapi 5 to browse and
+  restore previous versions of documents from the Content Manager.
 displayed_sidebar: cmsSidebar
 toc_max_heading_level: 5
 tags:
- - content manager
- - content history
- - features
+  - content manager
+  - content history
+  - features
 ---
 
 # Content History
@@ -69,3 +71,15 @@ sources={{
   dark:'/img/assets/content-manager/restoring-content-history_DARK.png',
 }}
 />
+
+## Implementation details
+
+The Content History feature uses a dedicated service to manage the persistence of history versions. Some key implementation details include:
+
+- History tables are persisted with the prefix `strapi_history_versions` to avoid data loss in case users temporarily don't have a license.
+- The service uses database lifecycle hooks to create history versions when relevant actions (create, update, clone, publish, unpublish, discardDraft) are performed on content types.
+- A daily job is scheduled to delete expired history versions based on the configured retention period.
+
+:::note
+The Content History feature is automatically initialized when Strapi starts, ensuring that history tracking begins as soon as the application is running.
+:::
