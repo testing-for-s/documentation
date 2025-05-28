@@ -9,44 +9,168 @@ tags:
 - WYSIWYG editor
 ---
 
-# Change the default WYSIWYG editor
+# Customizing the WYSIWYG editor
 
-Strapi's [admin panel](/cms/admin-panel-customization) comes with a built-in rich text editor. To change the default editor, several options are at your disposal:
+The WYSIWYG (What You See Is What You Get) editor in Strapi's admin panel can be customized to fit your specific needs. This document outlines the various strategies available for customization.
 
-- You can install a third-party plugin, such as one for CKEditor, by visiting <ExternalLink to="https://market.strapi.io/" text="Strapi's Marketplace"/>.
-- You can create your own plugin to create and register a fully custom WYSIWYG field (see [custom fields documentation](/cms/features/custom-fields)).
-- You can take advantage of Strapi's admin panel [extensions](/cms/admin-panel-customization/extension) system and leverage the [bootstrap lifecycle function](/cms/plugins-development/admin-panel-api#bootstrap) of the admin panel.
+## Blocks Toolbar Customization
 
-If you choose to use the extensions system, create your WYSIWYG component in the `/src/admin/extensions` folder and import it in the admin panel's `/src/admin/app.[tsx|js]` entry point file, then declare the new field with the `app.addFields()` function as follows:
+The Blocks Toolbar component in the WYSIWYG editor can be customized to add, remove, or modify the available formatting options. Here's an example of how the `BlocksToolbar` component is structured:
 
-<Tabs groupId="js-ts">
-<TabItem value="js" label="JavaScript">
+```jsx
+const BlocksToolbar = () => {
+  const { editor, blocks, modifiers, disabled } = useBlocksEditorContext('BlocksToolbar');
+  const { formatMessage } = useIntl();
 
-```js title="/src/admin/app.js"
-// The following file contains the logic for your new WYSIWYG editor👇
-import MyNewWYSIGWYG from "./extensions/components/MyNewWYSIGWYG";
+  const checkButtonDisabled = () => {
+    // Disable buttons when an image is selected or when the editor is disabled
+    if (disabled) {
+      return true;
+    }
 
-export default {
-  bootstrap(app) {
-    app.addFields({ type: "wysiwyg", Component: MyNewWYSIGWYG });
+    if (!editor.selection) {
+      return false;
+    }
+
+    const selectedNode = editor.children[editor.selection.anchor.path[0]];
+
+    if (['image', 'code'].includes(selectedNode.type)) {
+      return true;
+    }
+
+    return false;
+  };
+
+  const isButtonDisabled = checkButtonDisabled();
+
+  // ... rest of the component code
+};
+```
+
+This component uses the `useBlocksEditorContext` hook to access the editor state and configuration. It also checks if buttons should be disabled based on the current selection and editor state.
+
+## Adding Custom Blocks
+
+You can add custom blocks to the WYSIWYG editor by extending the `blocks` object. Here's an example of how you might add a custom block:
+
+```javascript
+const customBlocks = {
+  ...blocks,
+  'custom-block': {
+    icon: CustomBlockIcon,
+    label: {
+      id: 'components.Blocks.custom',
+      defaultMessage: 'Custom Block',
+    },
+    isInBlocksSelector: true,
+    handleConvert: (editor) => {
+      // Custom conversion logic
+    },
+    matchNode: (node) => node.type === 'custom-block',
   },
 };
 ```
 
-</TabItem>
+## Customizing Existing Blocks
 
-<TabItem value="ts" label="TypeScript">
+You can also modify existing blocks. For example, to customize the list buttons:
 
-```js title="/src/admin/app.tsx"
-// The following file contains the logic for your new WYSIWYG editor👇
-import MyNewWYSIGWYG from "./extensions/components/MyNewWYSIGWYG";
+```jsx
+const ListButton = ({ block, format, location = 'toolbar' }) => {
+  const { editor, disabled, blocks } = useBlocksEditorContext('ListButton');
+  const { formatMessage } = useIntl();
 
-export default {
-  bootstrap(app) {
-    app.addFields({ type: "wysiwyg", Component: MyNewWYSIGWYG });
-  },
+  const isListActive = () => {
+    // Check if the current selection is a list of the specified format
+  };
+
+  const isListDisabled = () => {
+    // Logic to determine if the list button should be disabled
+  };
+
+  const toggleList = (format) => {
+    // Logic to toggle the list format
+  };
+
+  // Render the button based on location (toolbar or menu)
+  // ...
 };
 ```
 
-</TabItem>
-</Tabs>
+## Styling the Toolbar
+
+The toolbar can be styled using styled-components. Here's an example of how some components are styled:
+
+```jsx
+const ToolbarWrapper = styled<FlexComponent>(Flex)`
+  &[aria-disabled='true'] {
+    cursor: not-allowed;
+    background: ${({ theme }) => theme.colors.neutral150};
+  }
+`;
+
+const FlexButton = styled<FlexComponent<'button'>>(Flex)`
+  &[aria-disabled] {
+    cursor: not-allowed;
+  }
+
+  &[aria-disabled='false'] {
+    cursor: pointer;
+
+    &:hover {
+      background: ${({ theme }) => theme.colors.primary100};
+    }
+  }
+`;
+```
+
+## Handling Conversions
+
+When converting between block types, you can handle special cases. For example, the `useConversionModal` hook is used to handle modal components that may be returned when converting a block:
+
+```javascript
+function useConversionModal() {
+  const [modalElement, setModalComponent] = React.useState<React.JSX.Element | null>(null);
+
+  const handleConversionResult = (renderModal: void | (() => React.JSX.Element) | undefined) => {
+    if (renderModal) {
+      setModalComponent(React.cloneElement(renderModal(), { key: Date.now() }));
+    }
+  };
+
+  return { modalElement, handleConversionResult };
+}
+```
+
+## Internationalization
+
+The WYSIWYG editor supports internationalization. You can use the `useIntl` hook to format messages:
+
+```javascript
+const { formatMessage } = useIntl();
+const labelMessage = formatMessage(label);
+```
+
+## Accessibility
+
+The WYSIWYG editor components are designed with accessibility in mind. For example, the toolbar buttons use `aria-disabled` and `aria-label` attributes:
+
+```jsx
+<Toolbar.ToggleItem
+  value={name}
+  data-state={isActive ? 'on' : 'off'}
+  onMouseDown={(e) => {
+    e.preventDefault();
+    handleClick();
+    ReactEditor.focus(editor);
+  }}
+  aria-disabled={disabled}
+  disabled={disabled}
+  aria-label={labelMessage}
+  asChild
+>
+  {/* Button content */}
+</Toolbar.ToggleItem>
+```
+
+By leveraging these customization options, you can tailor the WYSIWYG editor to better suit your project's needs while maintaining the core functionality and accessibility features provided by Strapi.
