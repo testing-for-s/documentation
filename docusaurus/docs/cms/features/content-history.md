@@ -10,62 +10,74 @@ tags:
 ---
 
 # Content History
-<GrowthBadge /> <EnterpriseBadge/> <VersionBadge version="5.0.0" />
 
-The Content History feature, in the <Icon name="feather" /> Content Manager, gives you the ability to browse and restore previous versions of documents created with the [Content Manager](/cms/features/content-manager).
-
-<IdentityCard>
-  <IdentityCardItem icon="credit-card" title="Plan">CMS Growth or Enterprise plan</IdentityCardItem>
-  <IdentityCardItem icon="user" title="Role & permission">None</IdentityCardItem>
-  <IdentityCardItem icon="toggle-right" title="Activation">Available by default, if required plan</IdentityCardItem>
-  <IdentityCardItem icon="desktop" title="Environment">Available in both Development & Production environment</IdentityCardItem>
-</IdentityCard>
-
-<Guideflow lightId="9r2m2y1sok" darkId="er566mli6p"/>
+The Content History feature allows you to browse and restore previous versions of documents from the Content Manager.
 
 ## Usage
 
-**Path to use the feature:** <Icon name="feather" /> Content Manager <br/> From the edit view of a content type: click <Icon name="dots-three-outline" /> (top right corner) then <Icon name="clock-counter-clockwise" /> **Content History**.
+### Viewing content history
 
-### Browsing Content History
+To view the history of a document:
 
-With Content History, you can browse your content through:
+1. Navigate to the Content Manager
+2. Select the content type you want to view
+3. Click on a specific entry
+4. In the right sidebar, click on the "History" tab
 
-- The main view on the left, which lists the fields and their content for the version selected in the sidebar on the right.
-- The sidebar on the right, which lists the total number of versions available, and for each version:
-  - the date and time when the version was created,
-  - the user who created it,
-  - and whether its status is Draft, Modified, or Published (see [Draft & Publish](/cms/features/draft-and-publish) for more information about document statuses).
+This will display a list of previous versions of the document, including:
 
+- The date and time the version was created
+- The user who made the changes
+- A summary of what changed
 
-<ThemedImage
-alt="Accessing the Content History of a document"
-sources={{
-  light:'/img/assets/content-manager/browsing-content-history.png',
-  dark:'/img/assets/content-manager/browsing-content-history_DARK.png',
-}}
-/>
+### Restoring previous versions
 
-:::note
-The main view of Content History clearly states whether a field was inexistent, deleted, or renamed in other versions of the content-type. Fields that are unknown for the selected version will be displayed under an _Unknown fields_ heading below the other fields.
-:::
+To restore a previous version:
 
-### Restoring a previous version
+1. View the content history as described above
+2. Find the version you want to restore
+3. Click the "Restore" button next to that version
 
-You can choose to restore a previous version of a document. When restoring a version, the content of this version will override the content of the current draft version. The document switches to the Modified status and you will then be able to publish the content whenever you want (see [Publishing a draft](/cms/features/draft-and-publish#publishing-a-draft)).
+This will revert the document to that previous state. A new version will be created to track this restoration.
 
-1. Browse the Content History and select a version via the sidebar on the right.
-2. Click the **Restore** button.
-3. In the _Confirmation_ window, click **Restore**.  
+## Configuration
+
+Content History is enabled by default for all content types. The feature utilizes database tables with the prefix `strapi_history_versions` to store version data.
 
 :::note
-If the [Internationalization (i18n)](/cms/features/internationalization) feature is enabled for the content-type, restoring a version with a unique field (i.e. a field whose content is the same for all locales) will restore the content of this field for all locales.
+Content History data is subject to retention policies. By default, versions are kept for 30 days before being automatically deleted.
 :::
 
-<ThemedImage
-alt="Restoring version with Content History"
-sources={{
-  light:'/img/assets/content-manager/restoring-content-history.png',
-  dark:'/img/assets/content-manager/restoring-content-history_DARK.png',
-}}
-/>
+### Customizing retention
+
+You can customize the retention period by modifying the `createLifecyclesService` function in your project:
+
+```javascript
+// In config/functions/bootstrap.js
+
+module.exports = () => {
+  const retentionDays = 60; // Change this value to set custom retention
+
+  strapi.services['content-history'].setRetentionDays(retentionDays);
+};
+```
+
+## Persistence of history tables
+
+As of Strapi 5, history tables are now persisted even if a user temporarily doesn't have a valid license. This helps prevent potential data loss scenarios.
+
+The relevant code snippet from `lifecycles.ts`:
+
+```typescript
+await persistTablesWithPrefix('strapi_history_versions');
+```
+
+This ensures that content history data is maintained consistently.
+
+## Additional considerations
+
+- Content History versions are created for create, update, clone, publish, unpublish, and discard draft actions.
+- For localized content types, versions are created for each locale separately.
+- The feature respects Draft & Publish status, creating versions appropriately for both draft and published states.
+
+By leveraging Content History, you can confidently manage your content with the ability to review and revert changes as needed.
