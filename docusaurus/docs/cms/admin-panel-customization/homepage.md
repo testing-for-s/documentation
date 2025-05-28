@@ -1,4 +1,4 @@
-# Homepage customization!
+# Homepage customization!!
 
 The Homepage is the landing page of the Strapi admin panel. By default, it provides an overview of your content with 2 default widgets:
 
