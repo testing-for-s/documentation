@@ -1,29 +1,25 @@
 ---
 title: Homepage customization
-description: Learn about the Strapi admin panel Homepage and how to customize it with widgets.
+description: >-
+  Learn about the Strapi admin panel Homepage and how to customize it with
+  widgets.
 toc_max_heading_level: 6
 tags:
-- admin panel
-- homepage
-- widgets
-- features
+  - admin panel
+  - homepage
+  - widgets
+  - features
 ---
 
 # Homepage customization
-<VersionBadge version="5.13.0"/>
 
-The <Icon name="house" /> Homepage is the landing page of the Strapi admin panel. By default, it provides an overview of your content with 2 default widgets:
+
+The  Homepage is the landing page of the Strapi admin panel. By default, it provides an overview of your content with 2 default widgets:
 
 - _Last edited entries_: Displays recently modified content entries, including their content type, status, and when they were updated.
 - _Last published entries_: Shows recently published content entries, allowing you to quickly access and manage your published content.
 
-<ThemedImage
-  alt="Homepage with default widgets"
-  sources={{
-    light: '/img/assets/admin-homepage/admin-panel-homepage.png',
-    dark: '/img/assets/admin-homepage/admin-panel-homepage_DARK.png',
-  }}
-/>
+
 
 These default widgets cannot currently be removed, but you can customize the Homepage by creating your own widgets.
 
@@ -40,11 +36,27 @@ To add a custom widget, you can:
 
 The present page will describe how to create and register your widgets.
 
+### Understanding widget placement
+
+Custom widgets are displayed on the Homepage alongside the default widgets (_Last edited entries_ and _Last published entries_). All widgets appear in a grid layout that automatically adjusts based on your screen size:
+
+- **Desktop**: Widgets are displayed in a multi-column grid
+- **Tablet/Mobile**: Widgets stack vertically for better readability
+
+Each widget is contained within a consistent card layout that includes:
+- A header with the widget's icon and title
+- The main content area (your custom component)
+- An optional link/action button (if specified in the widget configuration)
+
+:::info Widget ordering
+Custom widgets are displayed after the default widgets. The order of multiple custom widgets depends on the order they were registered in your application.
+:::
+
 ### Registering custom widgets
 
 To register a widget, use `app.widgets.register()`:
 
-- in the plugin’s [`register` lifecycle method](/cms/plugins-development/server-api#register) of the `index` file if you're building a plugin (recommended way),
+- in the plugin's [`register` lifecycle method](/cms/plugins-development/server-api#register) of the `index` file if you're building a plugin (recommended way),
 - or in the [application's global `register()` lifecycle method](/cms/configurations/functions#register) if you're adding the widget to just one Strapi application without a plugin.
 
 :::info
@@ -52,8 +64,8 @@ The examples on the present page will cover registering a widget through a plugi
 :::
 
 
-<Tabs groupId="js-ts">
-<TabItem value="javascript" label="JavaScript">
+
+
 
 ```jsx title="src/plugins/my-plugin/admin/src/index.js"
 import pluginId from './pluginId';
@@ -95,9 +107,9 @@ export default {
 };
 ```
 
-</TabItem>
 
-<TabItem value="typescript" label="TypeScript">
+
+
 
 ```tsx title="src/plugins/my-plugin/admin/src/index.ts"
 import pluginId from './pluginId';
@@ -140,8 +152,8 @@ export default {
 };
 ```
 
-</TabItem>
-</Tabs>
+
+
 
 :::note The API requires Strapi 5.13+
 The `app.widgets.register` API only works with Strapi 5.13 and above. Trying to call the API with older versions of Strapi will crash the admin panel.
@@ -167,7 +179,7 @@ The `app.widgets.register()` method can take either a single widget configuratio
 |-------------|------------------------|-------------------------------------------------------|----------|
 | `icon`      | `React.ComponentType`  | Icon component to display beside the widget title     | Yes      |
 | `title`     | `MessageDescriptor`    | Title for the widget with translation support         | Yes      |
-| `component` | `() => Promise<React.ComponentType>` | Async function that returns the widget component | Yes      |
+| `component` | `() => Promise` | Async function that returns the widget component | Yes      |
 | `id`        | `string`               | Unique identifier for the widget                      | Yes      |
 | `link`      | `Object`               | Optional link to add to the widget (see link object properties)| No       |
 | `pluginId`  | `string`               | ID of the plugin registering the widget               | No       |
@@ -188,8 +200,8 @@ Widget components should be designed to display content in a compact and informa
 
 Here's how to implement a basic widget component:
 
-<Tabs groupId="js-ts">
-<TabItem value="javascript" label="JavaScript">
+
+
 
 ```jsx title="src/plugins/my-plugin/admin/src/components/MyWidget/index.js"
 import React, { useState, useEffect } from 'react';
@@ -220,35 +232,35 @@ const MyWidget = () => {
   }, []);
 
   if (loading) {
-    return <Widget.Loading />;
+    return ;
   }
 
   if (error) {
-    return <Widget.Error />;
+    return ;
   }
 
   if (!data || data.length === 0) {
-    return <Widget.NoData />;
+    return ;
   }
 
   return (
-    <div>
+    
       {/* Your widget content here */}
-      <ul>
+      
         {data.map((item) => (
-          <li key={item.id}>{item.name}</li>
+          {item.name}
         ))}
-      </ul>
-    </div>
+      
+    
   );
 };
 
 export default MyWidget;
 ```
 
-</TabItem>
 
-<TabItem value="typescript" label="TypeScript">
+
+
 
 ```tsx title="src/plugins/my-plugin/admin/src/components/MyWidget/index.tsx"
 import React, { useState, useEffect } from 'react';
@@ -260,9 +272,9 @@ interface DataItem {
 }
 
 const MyWidget: React.FC = () => {
-  const [loading, setLoading] = useState<boolean>(true);
-  const [data, setData] = useState<DataItem[] | null>(null);
-  const [error, setError] = useState<Error | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     // Fetch your data here
@@ -284,34 +296,34 @@ const MyWidget: React.FC = () => {
   }, []);
 
   if (loading) {
-    return <Widget.Loading />;
+    return ;
   }
 
   if (error) {
-    return <Widget.Error />;
+    return ;
   }
 
   if (!data || data.length === 0) {
-    return <Widget.NoData />;
+    return ;
   }
 
   return (
-    <div>
+    
       {/* Your widget content here */}
-      <ul>
+      
         {data.map((item) => (
-          <li key={item.id}>{item.name}</li>
+          {item.name}
         ))}
-      </ul>
-    </div>
+      
+    
   );
 };
 
 export default MyWidget;
 ```
 
-</TabItem>
-</Tabs>
+
+
 
 :::tip
 For simplicity, the example below uses data fetching directly inside a useEffect hook. While this works for demonstration purposes, it may not reflect best practices in production.
@@ -323,7 +335,7 @@ For more robust solutions, consider alternative approaches recommended in the [R
 
 ![Rendering and Data management](/img/assets/homepage-customization/rendering-data-management.png)
 
-The green box above represents the area where the user’s React component (from `widget.component` in the [API](#widget-api-reference)) is rendered. You can render whatever you like inside of this box. Everything outside that box is, however, rendered by Strapi. This ensures overall design consistency within the admin panel. The `icon`, `title`, and `link` (optional) properties provided in the API are used to display the widget.
+The green box above represents the area where the user's React component (from `widget.component` in the [API](#widget-api-reference)) is rendered. You can render whatever you like inside of this box. Everything outside that box is, however, rendered by Strapi. This ensures overall design consistency within the admin panel. The `icon`, `title`, and `link` (optional) properties provided in the API are used to display the widget.
 
 #### Widget helper components reference
 
@@ -337,22 +349,102 @@ Strapi provides several helper components to maintain a consistent user experien
 | `Widget.NoPermissions` | Displays when user lacks required permissions | When the user cannot access the widget |
 
 These components help maintain a consistent look and feel across different widgets.
-You could render these components without children to get the default wording: `<Widget.Error />`
-or you could pass children to override the default copy and specify your own wording: `<Widget.Error>Your custom error message</Widget.Error>`.
+You could render these components without children to get the default wording: ``
+or you could pass children to override the default copy and specify your own wording: `Your custom error message`.
+
+### Adding widgets to the sidebar
+
+While the primary purpose of the widget system is to display content on the Homepage, it's important to understand that widgets are specifically designed for the Homepage and are not displayed in the admin panel's sidebar navigation.
+
+If you want to add navigation items to the sidebar, you should use the `app.addMenuLink()` method instead:
+
+
+
+
+```jsx title="src/plugins/my-plugin/admin/src/index.js"
+import pluginId from './pluginId';
+import MyPluginIcon from './components/MyPluginIcon';
+
+export default {
+  register(app) {
+    // Add a menu link to the sidebar
+    app.addMenuLink({
+      to: `/plugins/${pluginId}`,
+      icon: MyPluginIcon,
+      intlLabel: {
+        id: `${pluginId}.plugin.name`,
+        defaultMessage: 'My Plugin',
+      },
+      Component: async () => {
+        const { PluginPage } = await import('./pages/PluginPage');
+        return PluginPage;
+      },
+    });
+    
+    // Register the plugin
+    app.registerPlugin({
+      id: pluginId,
+      name: 'My Plugin',
+    });
+  },
+  
+  bootstrap() {},
+};
+```
+
+
+
+
+
+```tsx title="src/plugins/my-plugin/admin/src/index.ts"
+import pluginId from './pluginId';
+import MyPluginIcon from './components/MyPluginIcon';
+import type { StrapiApp } from '@strapi/admin/strapi-admin';
+
+export default {
+  register(app: StrapiApp) {
+    // Add a menu link to the sidebar
+    app.addMenuLink({
+      to: `/plugins/${pluginId}`,
+      icon: MyPluginIcon,
+      intlLabel: {
+        id: `${pluginId}.plugin.name`,
+        defaultMessage: 'My Plugin',
+      },
+      Component: async () => {
+        const { PluginPage } = await import('./pages/PluginPage');
+        return PluginPage;
+      },
+    });
+    
+    // Register the plugin
+    app.registerPlugin({
+      id: pluginId,
+      name: 'My Plugin',
+    });
+  },
+  
+  bootstrap() {},
+};
+```
+
+
+
+
+:::info Widgets vs Sidebar Navigation
+- **Widgets**: Display content cards on the Homepage to provide quick access to information and data
+- **Sidebar Navigation**: Provides navigation links to dedicated plugin pages or sections
+
+If you want both a sidebar navigation item and a Homepage widget for your plugin, you can use both `app.addMenuLink()` and `app.widgets.register()` in the same plugin registration.
+:::
 
 ## Example: Adding a content metrics widget
 
 The following is a complete example of how to create a content metrics widget that displays the number of entries for each content type in your Strapi application.
 
-The end result will look like the following in your admin panel's <Icon name="house" /> Homepage:
+The end result will look like the following in your admin panel's  Homepage:
 
-<ThemedImage
-  alt="Billing tab of Profile page"
-  sources={{
-      light: '/img/assets/homepage-customization/content-metrics-widget.png',
-      dark: '/img/assets/homepage-customization/content-metrics-widget_DARK.png',
-    }}
-/>
+
 
 The widget shows counts for example content-types automatically generated by Strapi when you provide the `--example` flag on installation (see [CLI installation options](/cms/installation/cli#cli-installation-options) for details).
 
@@ -362,11 +454,11 @@ This widget can be added to Strapi by:
 2. re-using the code examples provided below.
 
 :::tip
-If you prefer a hands-on approach, you can reuse the following <ExternalLink to="https://codesandbox.io/p/sandbox/github/pwizla/strapi-custom-widget-content-metrics" text="CodeSandbox link" />.
+If you prefer a hands-on approach, you can reuse the following .
 :::
 
-<Tabs groupId="js-ts">
-<TabItem value="javascript" label="JavaScript">
+
+
 
 The following file registers the plugin and the widget:
 
@@ -474,35 +566,35 @@ const MetricsWidget = () => {
   
   if (loading) {
     return (
-      <Widget.Loading />
+      
     );
   }
   
   if (error) {
     return (
-      <Widget.Error />
+      
     );
   }
   
   if (!metrics || Object.keys(metrics).length === 0) {
-    return <Widget.NoData>No content types found</Widget.NoData>;
+    return No content types found;
   }
   
   return (
-    <Table>
-      <Tbody>
+    
+      
         {Object.entries(metrics).map(([contentType, count], index) => (
-          <Tr key={index}>
-            <Td>
-              <Typography variant="omega">{String(contentType)}</Typography>
-            </Td>
-            <Td>
-              <Typography variant="omega" fontWeight="bold">{String(count)}</Typography>
-            </Td>
-          </Tr>
+          
+            
+              {String(contentType)}
+            
+            
+              {String(count)}
+            
+          
         ))}
-      </Tbody>
-    </Table>
+      
+    
   );
 };
 
@@ -567,9 +659,9 @@ export default {
 };
 ```
 
-</TabItem>
 
-<TabItem value="ts" label="TypeScript">
+
+
 
 The following file registers the plugin and the widget:
 
@@ -677,35 +769,35 @@ const MetricsWidget = () => {
   
   if (loading) {
     return (
-      <Widget.Loading />
+      
     );
   }
   
   if (error) {
     return (
-      <Widget.Error />
+      
     );
   }
   
   if (!metrics || Object.keys(metrics).length === 0) {
-    return <Widget.NoData>No content types found</Widget.NoData>;
+    return No content types found;
   }
   
   return (
-    <Table>
-      <Tbody>
+    
+      
         {Object.entries(metrics).map(([contentType, count], index) => (
-          <Tr key={index}>
-            <Td>
-              <Typography variant="omega">{String(contentType)}</Typography>
-            </Td>
-            <Td>
-              <Typography variant="omega" fontWeight="bold">{String(count)}</Typography>
-            </Td>
-          </Tr>
+          
+            
+              {String(contentType)}
+            
+            
+              {String(count)}
+            
+          
         ))}
-      </Tbody>
-    </Table>
+      
+    
   );
 };
 
@@ -770,5 +862,4 @@ export default {
 };
 ```
 
-</TabItem>
-</Tabs>
+
