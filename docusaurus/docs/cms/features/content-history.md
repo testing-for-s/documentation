@@ -10,62 +10,112 @@ tags:
 ---
 
 # Content History
-<GrowthBadge /> <EnterpriseBadge/> <VersionBadge version="5.0.0" />
 
-The Content History feature, in the <Icon name="feather" /> Content Manager, gives you the ability to browse and restore previous versions of documents created with the [Content Manager](/cms/features/content-manager).
+The Content History feature in Strapi 5 allows you to browse and restore previous versions of documents from the Content Manager. This feature helps you track changes, review past versions, and revert to earlier states of your content when needed.
 
-<IdentityCard>
-  <IdentityCardItem icon="credit-card" title="Plan">CMS Growth or Enterprise plan</IdentityCardItem>
-  <IdentityCardItem icon="user" title="Role & permission">None</IdentityCardItem>
-  <IdentityCardItem icon="toggle-right" title="Activation">Available by default, if required plan</IdentityCardItem>
-  <IdentityCardItem icon="desktop" title="Environment">Available in both Development & Production environment</IdentityCardItem>
-</IdentityCard>
-
-<Guideflow lightId="9r2m2y1sok" darkId="er566mli6p"/>
+:::note
+Content history tables are now persisted to avoid data loss when users temporarily don't have a license.
+:::
 
 ## Usage
 
-**Path to use the feature:** <Icon name="feather" /> Content Manager <br/> From the edit view of a content type: click <Icon name="dots-three-outline" /> (top right corner) then <Icon name="clock-counter-clockwise" /> **Content History**.
+The Content History feature provides the following functionality:
 
-### Browsing Content History
+### Viewing version history
 
-With Content History, you can browse your content through:
+1. Navigate to the Content Manager and select a content-type.
+2. Open an entry by clicking on it in the list view.
+3. In the right sidebar, click on the "History" tab to view the version history of the document.
 
-- The main view on the left, which lists the fields and their content for the version selected in the sidebar on the right.
-- The sidebar on the right, which lists the total number of versions available, and for each version:
-  - the date and time when the version was created,
-  - the user who created it,
-  - and whether its status is Draft, Modified, or Published (see [Draft & Publish](/cms/features/draft-and-publish) for more information about document statuses).
+The history tab displays a list of all previous versions of the document, including:
+- The date and time of each version
+- The user who made the changes
+- A brief summary of the changes made
 
+### Comparing versions
 
-<ThemedImage
-alt="Accessing the Content History of a document"
-sources={{
-  light:'/img/assets/content-manager/browsing-content-history.png',
-  dark:'/img/assets/content-manager/browsing-content-history_DARK.png',
-}}
-/>
+To compare two versions of a document:
 
-:::note
-The main view of Content History clearly states whether a field was inexistent, deleted, or renamed in other versions of the content-type. Fields that are unknown for the selected version will be displayed under an _Unknown fields_ heading below the other fields.
+1. In the History tab, select two versions you want to compare.
+2. Click the "Compare" button.
+3. A diff view will appear, highlighting the differences between the two selected versions.
+
+### Restoring previous versions
+
+To restore a previous version of a document:
+
+1. In the History tab, find the version you want to restore.
+2. Click the "Restore" button next to that version.
+3. Confirm the restoration in the dialog that appears.
+
+The document will be reverted to the selected version, and a new version will be created to record this change.
+
+### Automatic version creation
+
+Strapi automatically creates new versions of a document when:
+
+- A new document is created
+- An existing document is updated
+- A document is published or unpublished
+- A draft is discarded
+
+This ensures that you have a comprehensive history of all changes made to your content.
+
+### Retention period
+
+By default, Strapi keeps historical versions for a certain period. The retention period can be configured in your Strapi application settings. After this period, older versions are automatically deleted to manage database size.
+
+:::tip
+You can customize the retention period based on your project's needs and storage capabilities.
 :::
 
-### Restoring a previous version
+## Configuration
 
-You can choose to restore a previous version of a document. When restoring a version, the content of this version will override the content of the current draft version. The document switches to the Modified status and you will then be able to publish the content whenever you want (see [Publishing a draft](/cms/features/draft-and-publish#publishing-a-draft)).
+The Content History feature is enabled by default in Strapi 5. However, you can configure certain aspects of its behavior:
 
-1. Browse the Content History and select a version via the sidebar on the right.
-2. Click the **Restore** button.
-3. In the _Confirmation_ window, click **Restore**.  
+### Adjusting the retention period
 
-:::note
-If the [Internationalization (i18n)](/cms/features/internationalization) feature is enabled for the content-type, restoring a version with a unique field (i.e. a field whose content is the same for all locales) will restore the content of this field for all locales.
-:::
+To change the retention period for historical versions:
 
-<ThemedImage
-alt="Restoring version with Content History"
-sources={{
-  light:'/img/assets/content-manager/restoring-content-history.png',
-  dark:'/img/assets/content-manager/restoring-content-history_DARK.png',
-}}
-/>
+1. Open your Strapi project's configuration files.
+2. Locate the Content History configuration (usually in `./config/plugins.js` or a similar file).
+3. Set the `retentionDays` value to your desired number of days:
+
+```javascript
+module.exports = ({ env }) => ({
+  // ... other plugin configs
+  'content-history': {
+    enabled: true,
+    config: {
+      retentionDays: 30 // Adjust this value as needed
+    }
+  },
+  // ... other plugin configs
+});
+```
+
+### Disabling Content History for specific content-types
+
+If you want to disable Content History for certain content-types:
+
+1. Open the configuration file for the specific content-type.
+2. Add the `historyEnabled` option and set it to `false`:
+
+```javascript
+module.exports = {
+  kind: 'collectionType',
+  collectionName: 'articles',
+  info: {
+    singularName: 'article',
+    pluralName: 'articles',
+    displayName: 'Article',
+  },
+  options: {
+    draftAndPublish: true,
+    historyEnabled: false, // Disable Content History for this content-type
+  },
+  // ... rest of your content-type configuration
+};
+```
+
+By leveraging the Content History feature, you can maintain better control over your content's evolution, easily track changes, and recover from unintended modifications when necessary.
