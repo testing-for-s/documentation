@@ -1,12 +1,14 @@
 ---
 title: Homepage customization
-description: Learn about the Strapi admin panel Homepage and how to customize it with widgets.
+description: >-
+  Learn about the Strapi admin panel Homepage and how to customize it with
+  widgets.
 toc_max_heading_level: 6
 tags:
-- admin panel
-- homepage
-- widgets
-- features
+  - admin panel
+  - homepage
+  - widgets
+  - features
 ---
 
 # Homepage customization
@@ -44,7 +46,7 @@ The present page will describe how to create and register your widgets.
 
 To register a widget, use `app.widgets.register()`:
 
-- in the plugin’s [`register` lifecycle method](/cms/plugins-development/server-api#register) of the `index` file if you're building a plugin (recommended way),
+- in the plugin's [`register` lifecycle method](/cms/plugins-development/server-api#register) of the `index` file if you're building a plugin (recommended way),
 - or in the [application's global `register()` lifecycle method](/cms/configurations/functions#register) if you're adding the widget to just one Strapi application without a plugin.
 
 :::info
@@ -323,7 +325,7 @@ For more robust solutions, consider alternative approaches recommended in the [R
 
 ![Rendering and Data management](/img/assets/homepage-customization/rendering-data-management.png)
 
-The green box above represents the area where the user’s React component (from `widget.component` in the [API](#widget-api-reference)) is rendered. You can render whatever you like inside of this box. Everything outside that box is, however, rendered by Strapi. This ensures overall design consistency within the admin panel. The `icon`, `title`, and `link` (optional) properties provided in the API are used to display the widget.
+The green box above represents the area where the user's React component (from `widget.component` in the [API](#widget-api-reference)) is rendered. You can render whatever you like inside of this box. Everything outside that box is, however, rendered by Strapi. This ensures overall design consistency within the admin panel. The `icon`, `title`, and `link` (optional) properties provided in the API are used to display the widget.
 
 #### Widget helper components reference
 
@@ -340,6 +342,32 @@ These components help maintain a consistent look and feel across different widge
 You could render these components without children to get the default wording: `<Widget.Error />`
 or you could pass children to override the default copy and specify your own wording: `<Widget.Error>Your custom error message</Widget.Error>`.
 
+## Widget placement and behavior
+
+Once registered, custom widgets appear on the Strapi admin panel's <Icon name="house" /> Homepage below the default widgets. Widgets are displayed in a card-based layout, with each widget contained within its own card that includes:
+
+- **Header section**: Contains the widget icon, title, and optional link (if provided in the registration)
+- **Content area**: Where your custom React component is rendered
+- **Consistent styling**: Automatically matches the admin panel's design system
+
+### Widget visibility and permissions
+
+Widgets respect Strapi's permission system. If you specify permissions in your widget registration using the `permissions` property, the widget will only be visible to users who have the required permissions. Users without the necessary permissions will see a `Widget.NoPermissions` state instead of the widget content.
+
+### Widget ordering
+
+Currently, custom widgets are displayed in the order they are registered. The two default widgets (_Last edited entries_ and _Last published entries_) always appear first, followed by custom widgets in registration order. Widget positioning and custom ordering options may be enhanced in future versions of Strapi.
+
+### Adding widgets to the sidebar
+
+While this documentation focuses on Homepage widgets, it's worth noting that widgets in Strapi are specifically designed for the Homepage dashboard. If you're looking to add custom navigation or functionality to the sidebar, you should instead consider:
+
+- **Menu links**: Use `app.addMenuLink()` to add custom navigation items to the main sidebar menu
+- **Injection zones**: Use `app.addFields()` or other injection zone APIs to add content to specific areas of existing pages
+- **Custom pages**: Create entirely new pages within your plugin that can be accessed through sidebar navigation
+
+For more information on sidebar customization and navigation, refer to the [plugin development documentation](/cms/plugins-development/create-a-plugin) and [admin panel customization guides](/cms/admin-panel-customization).
+
 ## Example: Adding a content metrics widget
 
 The following is a complete example of how to create a content metrics widget that displays the number of entries for each content type in your Strapi application.
@@ -347,7 +375,7 @@ The following is a complete example of how to create a content metrics widget th
 The end result will look like the following in your admin panel's <Icon name="house" /> Homepage:
 
 <ThemedImage
-  alt="Billing tab of Profile page"
+  alt="Content metrics widget showing content type counts"
   sources={{
       light: '/img/assets/homepage-customization/content-metrics-widget.png',
       dark: '/img/assets/homepage-customization/content-metrics-widget_DARK.png',
