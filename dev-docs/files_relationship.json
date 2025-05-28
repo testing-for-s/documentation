@@ -1,1 +1,3606 @@
-{}
+{
+  "docusaurus/docs/cms/admin-panel-customization/homepage.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/features.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/features/admin-panel.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/sidebars.js": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/admin-homepage/admin-panel-homepage-with-tour.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/admin-homepage/admin-panel-homepage-with-tour_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/admin-homepage/admin-panel-homepage.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/admin-homepage/admin-panel-homepage_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/homepage-customization/content-metrics-widget.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/homepage-customization/content-metrics-widget_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/homepage-customization/rendering-data-management.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  ".github/CODEOWNERS": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "CONTRIBUTING.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/archive/advanced-features.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/archive/user-docs-intro.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/archive/users-permissions.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cloud/advanced/database.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cloud/advanced/email.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cloud/advanced/upload.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cloud/getting-started/cloud-fundamentals.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cloud/getting-started/deployment-cli.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cloud/getting-started/deployment.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cloud/getting-started/intro.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cloud/getting-started/usage-billing.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cloud/projects/settings.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/admin-panel-customization.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/admin-panel-customization/bundlers.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/admin-panel-customization/deployment.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/admin-panel-customization/extension.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/admin-panel-customization/host-port-path.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/admin-panel-customization/options.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/admin-panel-customization/wysiwyg-editor.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/content-api.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/document-service.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/document-service/fields.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/document-service/filters.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/document-service/locale.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/document-service/middlewares.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/document-service/populate.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/document-service/sort-pagination.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/document-service/status.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/document.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/entity-service.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/entity-service/components-dynamic-zones.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/entity-service/crud.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/entity-service/filter.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/entity-service/order-pagination.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/entity-service/populate.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/graphql.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/graphql/locale.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/query-engine.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/query-engine/bulk-operations.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/query-engine/filtering.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/query-engine/order-pagination.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/query-engine/populating.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/query-engine/single-operations.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/rest.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/rest/filters.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/rest/guides/intro.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/rest/guides/populate-creator-fields.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/rest/guides/understanding-populate.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/rest/interactive-query-builder.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/rest/locale.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/rest/parameters.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/rest/populate-select.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/rest/relations.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/rest/sort-pagination.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/rest/status.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/rest/upload.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/backend-customization.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/backend-customization/controllers.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/backend-customization/examples.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/backend-customization/examples/authentication.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/backend-customization/examples/middlewares.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/backend-customization/examples/policies.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/backend-customization/examples/routes.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/backend-customization/examples/services-and-controllers.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/backend-customization/middlewares.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/backend-customization/models.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/backend-customization/policies.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/backend-customization/requests-responses.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/backend-customization/routes.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/backend-customization/services.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/backend-customization/webhooks.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/cli.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/community.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/admin-panel.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/api.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/cron.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/database.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/environment.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/functions.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/guides/access-cast-environment-variables.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/guides/access-configuration-values.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/guides/configure-sso.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/guides/public-assets.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/guides/rbac.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/guides/use-cron-jobs.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/middlewares.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/plugins.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/server.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/sso-providers/discord.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/sso-providers/github.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/sso-providers/google.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/sso-providers/keycloak.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/sso-providers/microsoft.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/sso-providers/okta.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/typescript.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/users-and-permissions-providers.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/users-and-permissions-providers/auth-zero.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/users-and-permissions-providers/aws-cognito.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/users-and-permissions-providers/cas.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/users-and-permissions-providers/discord.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/users-and-permissions-providers/facebook.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/users-and-permissions-providers/github.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/users-and-permissions-providers/google.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/users-and-permissions-providers/instagram.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/users-and-permissions-providers/keycloak.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/users-and-permissions-providers/linkedin.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/users-and-permissions-providers/new-provider-guide.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/users-and-permissions-providers/patreon.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/users-and-permissions-providers/reddit.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/users-and-permissions-providers/twitch.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/users-and-permissions-providers/twitter.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/users-and-permissions-providers/vk.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/content-manager/adding-content-to-releases.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/content-manager/configuring-view-of-content-type.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/content-manager/introduction-to-content-manager.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/content-manager/managing-relational-fields.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/content-manager/review-assignee-dropdown.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/content-manager/review-stage-column.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/content-manager/review-stage-dropdown.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/content-manager/review-workflow-list-view.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/content-manager/reviewing-content.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/content-manager/saving-and-publishing-content.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/content-manager/translating-content.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/content-manager/working-with-content-history.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/content-manager/writing-content.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/content-type-builder/configuring-fields-content-type.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/content-type-builder/creating-new-content-type.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/content-type-builder/introduction-to-content-types-builder.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/content-type-builder/managing-content-types.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/customization.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/data-management/export.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/data-management/import.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/data-management/transfer.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/database-migrations.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/database-transactions.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/deployment.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/error-handling.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/faq.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/features/api-tokens.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/features/audit-logs.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/features/content-history.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/features/content-manager.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/features/content-type-builder.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/features/data-management.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/features/draft-and-publish.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/features/email.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/features/internationalization.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/features/media-library.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/features/preview.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/features/rbac.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/features/releases.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/features/review-workflows.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/features/sso.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/features/users-permissions.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/getting-started/setting-up-admin-panel.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/getting-started/user-guide-fundamentals.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/installation.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/installation/cli.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/installation/docker.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/integrations/11ty.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/integrations/angular.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/integrations/dart.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/integrations/flutter.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/integrations/gatsby.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/integrations/go.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/integrations/graphql.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/integrations/gridsome.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/integrations/jekyll.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/integrations/laravel.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/integrations/next-js.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/integrations/nuxt-js.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/integrations/php.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/integrations/python.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/integrations/react.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/integrations/ruby.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/integrations/sapper.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/integrations/svelte.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/integrations/vue-js.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/intro.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/media-library/adding-assets.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/media-library/introduction-to-the-media-library.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/media-library/managing-assets.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/media-library/organizing-assets-with-folders.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/additional-resources/from-entity-service-to-document-service.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/additional-resources/helper-plugin.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/additional-resources/introduction.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/additional-resources/plugins-migration.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/admin-panel-rbac-store-updated.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/attributes-and-content-types-names-reserved.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/components-and-dynamic-zones-do-not-return-id.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/core-service-methods-use-document-service.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/database-columns.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/database-identifiers-shortened.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/default-index-removed.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/default-input-validation.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/edit-view-layout-and-list-view-layout-rewritten.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/entity-service-deprecated.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/fetch.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/get-where-removed.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/graphql-api-updated.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/helper-plugin-deprecated.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/i18n-content-manager-locale.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/inject-content-manager-component.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/is-supported-image-removed.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/koa-body-v6.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/license-only.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/lifecycle-hooks-document-service.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/mailgun-provider-variables.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/model-config-path-uses-uid.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/mysql5-unsupported.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/new-response-format.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/no-find-page-in-document-service.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/no-locale-all.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/no-shared-population-strategy-components-dynamic-zones.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/no-upload-at-entry-creation.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/only-better-sqlite3-for-sqlite.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/only-mysql2-package-for-mysql.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/publication-state-removed.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/publishedat-always-set-when-dandp-disabled.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/react-router-dom-6.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/redux-content-manager-app-state.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/register-allowed-fields.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/remove-webhook-populate-relations.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/removed-support-for-some-env-options.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/server-default-log-level.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/server-proxy.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/sort-by-id.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/strapi-container.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/strapi-imports.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/strapi-utils-refactored.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/strict-requirements-config-files.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/templates.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/upgrade-to-apollov4.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/use-document-id.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/vite.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/webpack-aliases-removed.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/breaking-changes/yarn-not-default.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/introduction-and-faq.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v4-to-v5/step-by-step.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/migration/v5/migration-guide-5.0.0-to-5.0.1.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/plugins-development/admin-panel-api.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/plugins-development/content-manager-apis.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/plugins-development/create-a-plugin.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/plugins-development/custom-fields.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/plugins-development/developing-plugins.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/plugins-development/guides/pass-data-from-server-to-admin.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/plugins-development/guides/store-and-access-data.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/plugins-development/plugin-sdk.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/plugins-development/plugin-structure.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/plugins-development/plugins-extension.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/plugins-development/server-api.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/plugins/documentation.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/plugins/graphql.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/plugins/installing-plugins-via-marketplace.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/plugins/introduction-to-plugins.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/plugins/sentry.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/plugins/strapi-plugins.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/plugins/upload.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/project-structure.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/providers.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/quick-start.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/releases/creating-a-release.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/releases/introduction.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/releases/managing-a-release.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/settings/API-tokens.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/settings/admin-panel.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/settings/audit-logs.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/settings/configuring-users-permissions-plugin-settings.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/settings/internationalization.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/settings/introduction.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/settings/media-library-settings.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/settings/releases.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/settings/review-workflows.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/settings/single-sign-on.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/settings/transfer-tokens.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/setup-deployment.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/templates.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/testing.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/typescript.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/typescript/adding-support-to-existing-project.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/typescript/development.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/upgrade-tool.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/upgrades.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/usage-information.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/users-roles-permissions/configuring-administrator-roles.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/users-roles-permissions/configuring-end-users-roles.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/users-roles-permissions/introduction-to-users-roles-permissions.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/users-roles-permissions/managing-administrators.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/users-roles-permissions/managing-end-users.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/whats-new.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/plugins.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/plugins/using-plugins.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/admin-panel-customization/favicon.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/admin-panel-customization/locales-translations.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/admin-panel-customization/logos.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/admin-panel-customization/theme-extension.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cloud/getting-started/caching.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/api/client.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/release-notes.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/snippets/backend-customization-feedback-cta.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/snippets/content-source-map-requirements.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/snippets/deep-filtering-blog.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/snippets/installation-prerequisites.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/snippets/qs-for-query-body.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/snippets/qs-intro-full.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/snippets/qs-intro-short.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/snippets/u-and-p-provider-config-done.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/graphql-api-updated.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/components-and-dynamic-zones-do-not-return-id.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/strapi-container.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/strapi-imports.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/getting-started/setting-up-admin-panel.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/getting-started/user-guide-fundamentals.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/intro.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/settings/introduction.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings-i18n.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings-i18n_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings_api-token-custom.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings_api-token-custom_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings_api-token.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings_api-token_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings_create-transfer-token.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings_create-transfer-token_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings_custom-logo.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings_custom-logo_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings_media-library.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings_media-library_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings_transfer-token.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings_transfer-token_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/up_email-templates.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/up_email-templates_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/up_providers.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/up_providers_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/up_settings.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/up_settings_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/plugins/content-source-map.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/content-api.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/rest.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/rest/guides/intro.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/rest/guides/populate-creator-fields.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/rest/guides/understanding-populate.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/rest/populate-select.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/rest-api/ctb-article-components-structure.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/rest-api/ctb-blocks-dynamic-zone-structure-2.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/rest-api/ctb-blocks-dynamic-zone-structure.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/rest-api/populate-foodadvisor-diagram.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/rest-api/populate-foodadvisor-diagram1.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/rest-api/populate-foodadvisor-diagram2.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/rest-api/populate-foodadvisor-diagram3.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/core-service-methods-use-document-service.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/guides/from-entity-service-to-document-service.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/koa-body-v6.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/inject-content-manager-component.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/plugins/admin-panel-api.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/only-better-sqlite3-for-sqlite.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/content-manager/working-with-content-history.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/accessing-content-history.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/accessing-content-history_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/browsing-content-history.gif": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/browsing-content-history_DARK.gif": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/restoring-version.gif": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/restoring-version_DARK.gif": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/document-service.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/document-service/locale.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/document-service/middlewares.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/document-service/select.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/document-service/status.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/document.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/components/ReusableAnnotationComponents/ReusableAnnotationComponents.jsx": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/guides/introduction.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/guides/plugins-migration.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/introduction.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/use-the-upgrade-tool.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/plugins/guides/use-the-plugin-cli.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/entity-service-deprecated.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/publication-state-removed.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/admin-panel-rbac-store-updated.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/mailgun-provider-variables.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/backend-customization/controllers.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/default-input-validation.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/database.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/mysql5-unsupported.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/only-mysql2-package-for-mysql.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/attributes-and-content-types-names-reserved.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/locale-attribute-reserved.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/admin-panel.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/middlewares.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/default-index-removed.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/new-response-format.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/document-service/lifecycle-hooks.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/backend-customization/models.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/lifecycle-hooks-document-service.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/advanced-features.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/database-transactions.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/license-only.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/plugins/lightning-icon-menu.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/plugins/lightning-icon-settings.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/server-proxy.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/data-management/export.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/data-management/import.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/data-management/transfer.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/intro.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration-guides.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/plugins-extension.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/plugins/i18n.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/update-migration.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/update-version.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/upgrade-tool.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/upgrades.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/pages/home/_home.content.js": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/theme/MDXComponents.js": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/migration/strapi-version-number.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/migration/strapi-version-number_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/vercel.json": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/faq.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/database-identifiers-shortened.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/draft-and-publish-always-enabled.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/edit-view-layout-and-list-view-layout-rewritten.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/fetch.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/helper-plugin-deprecated.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/i18n-content-manager-locale.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/is-supported-image-removed.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/model-config-path-uses-uid.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/no-find-page-in-document-service.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/no-locale-all.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/no-localizations-field.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/publishedat-always-set-when-dandp-disabled.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/react-router-dom-6.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/redux-content-manager-app-state.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/register-allowed-fields.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/remove-webhook-populate-relations.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/removed-support-for-some-env-options.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/server-default-log-level.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/sort-by-id.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/strapi-utils-refactored.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/strict-requirements-config-files.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/upgrade-to-apollov4.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/use-document-id.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/vite.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/webpack-aliases-removed.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/guides/helper-plugin.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/migration-guides.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/whats-new.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/snippets/_do-not-migrate-to-v5-yet.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/package.json": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/query-engine.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/query-engine/bulk-operations.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/query-engine/filtering.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/query-engine/order-pagination.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/query-engine/populating.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/query-engine/single-operations.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/snippets/consider-document-service.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/document-service/fields.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/document-service/populate.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/plugins.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/additional-resources/from-entity-service-to-document-service.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/additional-resources/helper-plugin.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/additional-resources/introduction.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/additional-resources/plugins-migration.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/introduction-and-faq.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/step-by-step.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/admin-panel-customization.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/admin-panel-customization/bundlers.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/admin-panel-customization/deployment.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/admin-panel-customization/development.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/admin-panel-customization/extension.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/admin-panel-customization/host-port-path.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/admin-panel-customization/options.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/admin-panel-customization/wysiwyg-editor.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/backend-customization.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/cli.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/snippets/hot-reloading-admin-panel.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/settings/releases.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/releases/release-settings.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/graphql.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/snippets/middleware-types.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/__index.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/_mixins.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/diagrams.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/sqlite.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/deployment.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/deployment/amazon-aws.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/deployment/azure.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/deployment/caddy-proxy.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/deployment/digitalocean-app-platform.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/deployment/digitalocean.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/deployment/haproxy-proxy.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/deployment/heroku.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/deployment/hosting-guides.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/deployment/nginx-proxy.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/deployment/optional-software-guides.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/deployment/process-manager.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/deployment/snippets-proxy/admin-redirect.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/deployment/snippets-proxy/strapi-server.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/deployment/snippets-proxy/subfolder-split-warning.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/testing.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/snippets/community-deployment-guides.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/rest/filters-locale-publication.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/rest/parameters.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/environment.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/i18n.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/cron.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/guides/use-cron-jobs.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/installation/cli.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/templates.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/templates.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/plugins/developing-plugins.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/plugins/development/plugin-sdk.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/plugins/guides/use-the-plugin-sdk.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/yarn.lock": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/plugins/development/create-a-plugin.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/plugins/development/plugin-cli.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/content-manager/adding-content-to-releases.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/content-manager/configuring-view-of-content-type.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/content-manager/introduction-to-content-manager.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/content-manager/reviewing-content.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/content-manager/saving-and-publishing-content.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/content-manager/translating-content.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/content-manager/writing-content.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/content-type-builder/configuring-fields-content-type.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/content-type-builder/creating-new-content-type.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/content-type-builder/introduction-to-content-types-builder.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/content-type-builder/managing-content-types.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/media-library/adding-assets.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/media-library/introduction-to-the-media-library.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/media-library/managing-assets.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/media-library/organizing-assets-with-folders.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/plugins/installing-plugins-via-marketplace.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/plugins/introduction-to-plugins.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/plugins/strapi-plugins.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/releases/creating-a-release.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/settings/API-tokens.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/settings/admin-panel.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/settings/audit-logs.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/settings/configuring-users-permissions-plugin-settings.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/settings/internationalization.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/settings/media-library-settings.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/settings/review-workflows.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/settings/single-sign-on.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/settings/transfer-tokens.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/users-roles-permissions/configuring-administrator-roles.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/users-roles-permissions/configuring-end-users-roles.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/users-roles-permissions/managing-administrators.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/users-roles-permissions/managing-end-users.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/browsing-content-history.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/browsing-content-history_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/bulk-publish.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/bulk-publish_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/content-manager_displayed-fields.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/content-manager_displayed-fields_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/content-manager_filters2.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/content-manager_filters2_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/content-manager_list-view.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/content-manager_list-view_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/content-manager_settings-list-view.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/content-manager_settings-list-view_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/content-manager_single-type.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/content-manager_single-type_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/content-manager_translate3.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/content-manager_translate3_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/content-manager_unpublish.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/content-manager_unpublish_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/edit-view-config2.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/edit-view-config2_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/edit-view3.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/edit-view3_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/edit-view_component2.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/edit-view_component2_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/edit-view_component3.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/edit-view_component3_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/edit-view_component4.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/edit-view_component4_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/edit-view_dynamic-zone-1.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/edit-view_dynamic-zone-1_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/edit-view_dynamic-zone-2.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/edit-view_dynamic-zone-2_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/editing_draft_version3.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/editing_draft_version3_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/editing_published_version3.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/editing_published_version3_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/review-assignee-dropdown.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/review-assignee-dropdown_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/review-stage-dropdown.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/review-stage-dropdown_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/review-workflow-list-view.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/review-workflow-list-view_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-type-builder/advanced-settings.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-type-builder/advanced-settings_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-type-builder/basic-settings.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-type-builder/basic-settings_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-type-builder/component-creation-1.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-type-builder/component-creation-1_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-type-builder/content-type-creation.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-type-builder/content-type-creation_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-type-builder/content-types-builder.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-type-builder/content-types-builder_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-type-builder/content-types-builder_edition.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-type-builder/content-types-builder_edition_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-type-builder/fields-selection.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-type-builder/fields-selection_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/getting-started/admin-panel-homepage.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/getting-started/admin-panel-homepage_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/getting-started/user-information-profile.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/getting-started/user-information-profile_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/icons/v5/ClockCounterClockwise.svg": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/icons/v5/ExternalLink.svg": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/icons/v5/ctb_boolean.svg": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/icons/v5/ctb_component.svg": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/icons/v5/ctb_date.svg": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/icons/v5/ctb_dz.svg": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/icons/v5/ctb_email.svg": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/icons/v5/ctb_enum.svg": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/icons/v5/ctb_json.svg": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/icons/v5/ctb_media.svg": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/icons/v5/ctb_number.svg": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/icons/v5/ctb_password.svg": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/icons/v5/ctb_relation.svg": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/icons/v5/ctb_richtext.svg": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/icons/v5/ctb_richtextblocks.svg": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/icons/v5/ctb_text.svg": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/icons/v5/ctb_uid.svg": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/media-library/media-library_add-new-assets.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/media-library/media-library_add-new-assets_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/media-library/media-library_asset-details.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/media-library/media-library_asset-details_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/media-library/media-library_configure-the-view.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/media-library/media-library_configure-the-view_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/media-library/media-library_filters.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/media-library/media-library_filters_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/media-library/media-library_folder-content.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/media-library/media-library_folder-content_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/media-library/media-library_move-assets.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/media-library/media-library_move-assets_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/media-library/media-library_overview.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/media-library/media-library_overview_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/media-library/media-library_sort.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/media-library/media-library_sort_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/plugins/marketplace-plugins.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/plugins/marketplace-plugins_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/plugins/plugins-settings.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/plugins/plugins-settings_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/releases/new-release.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/releases/new-release_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/releases/release-details.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/releases/release-details_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/releases/release-scheduling.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/releases/release-scheduling_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/releases/release-settings_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/releases/releases-cm-list-view.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/releases/releases-cm-list-view_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/releases/releases-overview2.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/releases/releases-overview2_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/review-workflows/edit-view-dark.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/review-workflows/edit-view-light.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/review-workflows/list-view-dark.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/review-workflows/list-view-light.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings-sso.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings-sso_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings_audit-logs-filters.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings_audit-logs-filters_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings_audit-logs.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings_audit-logs_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings_log-details.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings_log-details_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/users-permissions/administrator_custom-conditions.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/users-permissions/administrator_custom-conditions_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/users-permissions/administrator_edit-info.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/users-permissions/administrator_edit-info_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/users-permissions/administrator_list-view.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/users-permissions/administrator_list-view_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/users-permissions/administrator_roles-edition.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/users-permissions/administrator_roles-edition_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/users-permissions/administrator_roles.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/users-permissions/administrator_roles_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/users-permissions/end-user_content-manager.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/users-permissions/end-user_content-manager_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/users-permissions/end-user_roles-config.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/users-permissions/end-user_roles-config_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/users-permissions/end-user_roles.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/users-permissions/end-user_roles_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/users-permissions/users-roles-permissions-settings.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/users-permissions/users-roles-permissions-settings_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/plugins/content-manager-apis.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager-apis/add-bulk-action.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager-apis/add-document-action-bis.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager-apis/add-document-action-header.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager-apis/add-document-action-panel.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager-apis/add-document-action-tablerow.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager-apis/add-document-action.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager-apis/add-document-header-action.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager-apis/add-edit-view-side-panel.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/backend-customization/webhooks.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/api-tokens.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/features.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/no-upload-at-entry-creation.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/plugins/server-api.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/plugins/users-permissions.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/snippets/docker-env-table.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/content-manager/managing-relational-fields.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/releases/introduction.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "README.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/document-service/filters.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/document-service/sort-pagination.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/entity-service.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/entity-service/components-dynamic-zones.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/entity-service/crud.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/entity-service/filter.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/entity-service/order-pagination.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/entity-service/populate.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/rest/sort-pagination.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/backend-customization/examples.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/backend-customization/examples/authentication.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/backend-customization/examples/middlewares.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/backend-customization/examples/policies.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/backend-customization/examples/routes.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/backend-customization/examples/services-and-controllers.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/backend-customization/policies.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/backend-customization/routes.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/backend-customization/services.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/api.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/functions.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/guides/access-cast-environment-variables.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/guides/access-configuration-values.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/guides/public-assets.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/guides/rbac.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/server.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/sso.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/typescript.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/custom-fields.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/customization.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/data-management.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/error-handling.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/installation/docker.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/integrations/11ty.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/integrations/angular.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/integrations/dart.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/integrations/flutter.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/integrations/gatsby.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/integrations/go.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/integrations/graphql.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/integrations/gridsome.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/integrations/jekyll.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/integrations/laravel.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/integrations/next-js.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/integrations/nuxt-js.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/integrations/php.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/integrations/python.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/integrations/react.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/integrations/ruby.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/integrations/sapper.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/integrations/svelte.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/integrations/vue-js.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v5/migration-guide-5.0.0-to-5.0.1.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/plugins/development/plugin-structure.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/plugins/documentation.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/plugins/email.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/plugins/graphql.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/plugins/guides/pass-data-from-server-to-admin.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/plugins/guides/store-and-access-data.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/plugins/sentry.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/plugins/upload.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/project-structure.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/quick-start.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/setup-deployment.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/typescript.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/releases/managing-a-release.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docusaurus.config.js": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/components/Badge.js": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/components/CustomDocCard.js": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/components/Icon.js": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/components/MultiLanguageSwitcher/multi-language-switcher.module.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/_base.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/_tokens.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/admonition.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/announcement-bar.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/api-call.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/badge.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/breadcrumbs.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/card.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/code-block.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/code.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/custom-doc-cards.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/custom-search-bar.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/details.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/footer.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/icons.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/images.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/navbar.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/pagination-nav.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/sidebar.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/table-of-contents.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/table.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/tabs.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/typography.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/theme/Admonition/index.js": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/theme/DocSidebar/CustomSearchBar.js": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/theme/DocSidebar/index.js": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/theme/DocSidebarItem/Category/index.js": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/theme/DocSidebarItem/Html/index.js": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/theme/DocSidebarItem/Html/styles.module.css": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/theme/DocSidebarItem/Link/index.js": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/theme/DocSidebarItem/Link/styles.module.css": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/theme/DocSidebarItem/index.js": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/theme/Navbar/MobileSidebar/Header/index.js": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cloud/projects/runtime-logs.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/graphql/locale.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/rest/filters.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/rest/interactive-query-builder.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/rest/locale.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/rest/relations.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/rest/status.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/api/rest/upload.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/backend-customization/requests-responses.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/community.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/users-and-permissions-providers.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/users-and-permissions-providers/auth-zero.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/users-and-permissions-providers/aws-cognito.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/users-and-permissions-providers/cas.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/users-and-permissions-providers/discord.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/users-and-permissions-providers/facebook.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/users-and-permissions-providers/github.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/users-and-permissions-providers/google.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/users-and-permissions-providers/instagram.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/users-and-permissions-providers/keycloak.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/users-and-permissions-providers/linkedin.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/users-and-permissions-providers/new-provider-guide.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/users-and-permissions-providers/patreon.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/users-and-permissions-providers/reddit.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/users-and-permissions-providers/twitch.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/users-and-permissions-providers/twitter.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/users-and-permissions-providers/vk.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/database-migrations.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/database-columns.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/get-where-removed.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/no-shared-population-strategy-components-dynamic-zones.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/migration/v4-to-v5/breaking-changes/yarn-not-default.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/providers.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/typescript/development.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/features/RBAC.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/features/SSO.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/features/admin-panel.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/features/api-tokens.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/features/audit-logs.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/features/content-history.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/features/content-manager.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/features/content-type-builder.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/features/data-management.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/features/draft-and-publish.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/features/email.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/features/internationalization.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/features/media-library.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/features/preview.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/features/releases.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/features/review-workflows.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/user-docs/features/users-permissions.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/components/Guideflow.js": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/src/scss/kapa.scss": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager-guideflow.gif": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager-guideflow2.gif": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/previewing-content.gif": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/content-manager/previewing-content.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/icons/v5/info.svg": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/plugins/documentation-plugin.gif": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/plugins/documentation-plugin_DARK.gif": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings-email-config-role.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings-email-config-role_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings-email.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/img/assets/settings/settings-email_DARK.png": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/guides/configure-sso.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/sso-providers/discord.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/sso-providers/github.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/sso-providers/google.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/sso-providers/keycloak.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/sso-providers/microsoft.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/dev-docs/configurations/sso-providers/okta.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/whats-new.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/plugins-development/guides/create-components-for-plugins.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/features/custom-fields.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/static/js/redirector.js": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/configurations/media-library-providers.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/typescript/documents-and-entries.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/cms/typescript/guides.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/snippets/media-library-providers-list.md": {
+    "downstream_files": [],
+    "commits": []
+  },
+  "docusaurus/docs/snippets/supported-databases.md": {
+    "downstream_files": [],
+    "commits": []
+  }
+}
