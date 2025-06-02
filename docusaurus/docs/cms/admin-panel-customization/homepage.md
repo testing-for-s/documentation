@@ -1,21 +1,12 @@
----
-title: Homepage customization
-description: Learn about the Strapi admin panel Homepage and how to customize it with widgets.
-toc_max_heading_level: 6
-tags:
-- admin panel
-- homepage
-- widgets
-- features
----
-
 # Homepage customization
+
 <VersionBadge version="5.13.0"/>
 
-The <Icon name="house" /> Homepage is the landing page of the Strapi admin panel. By default, it provides an overview of your content with 2 default widgets:
+The <Icon name="house" />Homepageaaa is the landing page of the Strapi admin panel. By default, it provides an overview of your content with 2 default widgets:
 
-- _Last edited entries_: Displays recently modified content entries, including their content type, status, and when they were updated.
-- _Last published entries_: Shows recently published content entries, allowing you to quickly access and manage your published content.
+* *Last edited entries*: Displays recently modified content entries, including their content type, status, and when they were updated.
+
+* *Last published entries*: Shows recently published content entries, allowing you to quickly access and manage your published content.
 
 <ThemedImage
   alt="Homepage with default widgets"
@@ -27,16 +18,15 @@ The <Icon name="house" /> Homepage is the landing page of the Strapi admin panel
 
 These default widgets cannot currently be removed, but you can customize the Homepage by creating your own widgets.
 
-:::note
-If you recently created a Strapi project, the Homepage may also display a quick tour above widgets if you haven't skipped it yet.
-:::
+:::note If you recently created a Strapi project, the Homepage may also display a quick tour above widgets if you haven't skipped it yet. :::
 
 ## Adding custom widgets
 
 To add a custom widget, you can:
 
-- install a plugin from the [Marketplace](/cms/plugins/installing-plugins-via-marketplace)
-- or create and register your own widgets
+* install a plugin from the [Marketplace](/cms/plugins/installing-plugins-via-marketplace)
+
+* or create and register your own widgets
 
 The present page will describe how to create and register your widgets.
 
@@ -44,13 +34,11 @@ The present page will describe how to create and register your widgets.
 
 To register a widget, use `app.widgets.register()`:
 
-- in the plugin’s [`register` lifecycle method](/cms/plugins-development/server-api#register) of the `index` file if you're building a plugin (recommended way),
-- or in the [application's global `register()` lifecycle method](/cms/configurations/functions#register) if you're adding the widget to just one Strapi application without a plugin.
+* in the plugin’s `register`[ lifecycle method](/cms/plugins-development/server-api#register) of the `index` file if you're building a plugin (recommended way),
 
-:::info
-The examples on the present page will cover registering a widget through a plugin. Most of the code should be reusable if you register the widget in the application's global `register()` lifecycle method, except you should not pass the `pluginId` property.
-:::
+* or in the [application's global ](/cms/configurations/functions#register)`register()`[ lifecycle method](/cms/configurations/functions#register) if you're adding the widget to just one Strapi application without a plugin.
 
+:::info The examples on the present page will cover registering a widget through a plugin. Most of the code should be reusable if you register the widget in the application's global `register()` lifecycle method, except you should not pass the `pluginId` property. :::
 
 <Tabs groupId="js-ts">
 <TabItem value="javascript" label="JavaScript">
@@ -143,12 +131,11 @@ export default {
 </TabItem>
 </Tabs>
 
-:::note The API requires Strapi 5.13+
-The `app.widgets.register` API only works with Strapi 5.13 and above. Trying to call the API with older versions of Strapi will crash the admin panel.
-Plugin developers who want to register widgets should either:
+:::note The API requires Strapi 5.13+ The `app.widgets.register` API only works with Strapi 5.13 and above. Trying to call the API with older versions of Strapi will crash the admin panel. Plugin developers who want to register widgets should either:
 
-- set `^5.13.0` as their `@strapi/strapi` peerDependency in their plugin `package.json`. This peer dependency powers the Marketplace's compatibility check.
-- or check if the API exists before calling it:
+* set `^5.13.0` as their `@strapi/strapi` peerDependency in their plugin `package.json`. This peer dependency powers the Marketplace's compatibility check.
+
+* or check if the API exists before calling it:
 
   ```js
   if ('widgets' in app) {
@@ -156,35 +143,34 @@ Plugin developers who want to register widgets should either:
   }
   ```
 
-The peerDependency approach is recommended if the whole purpose of the plugin is to register widgets. The second approach makes more sense if a plugin wants to add a widget but most of its functionality is elsewhere.
-:::
+The peerDependency approach is recommended if the whole purpose of the plugin is to register widgets. The second approach makes more sense if a plugin wants to add a widget but most of its functionality is elsewhere. :::
 
 #### Widget API reference
 
 The `app.widgets.register()` method can take either a single widget configuration object or an array of configuration objects. Each widget configuration object can accept the following properties:
 
-| Property    | Type                   | Description                                           | Required |
-|-------------|------------------------|-------------------------------------------------------|----------|
-| `icon`      | `React.ComponentType`  | Icon component to display beside the widget title     | Yes      |
-| `title`     | `MessageDescriptor`    | Title for the widget with translation support         | Yes      |
-| `component` | `() => Promise<React.ComponentType>` | Async function that returns the widget component | Yes      |
-| `id`        | `string`               | Unique identifier for the widget                      | Yes      |
-| `link`      | `Object`               | Optional link to add to the widget (see link object properties)| No       |
-| `pluginId`  | `string`               | ID of the plugin registering the widget               | No       |
-| `permissions` | `Permission[]`       | Permissions required to view the widget               | No       |
+| Property      | Type                                 | Description                                                     | Required |
+| ------------- | ------------------------------------ | --------------------------------------------------------------- | -------- |
+| `icon`        | `React.ComponentType`                | Icon component to display beside the widget title               | Yes      |
+| `title`       | `MessageDescriptor`                  | Title for the widget with translation support                   | Yes      |
+| `component`   | `() => Promise<React.ComponentType>` | Async function that returns the widget component                | Yes      |
+| `id`          | `string`                             | Unique identifier for the widget                                | Yes      |
+| `link`        | `Object`                             | Optional link to add to the widget (see link object properties) | No       |
+| `pluginId`    | `string`                             | ID of the plugin registering the widget                         | No       |
+| `permissions` | `Permission[]`                       | Permissions required to view the widget                         | No       |
 
 **Link object properties:**
 
 If you want to add a link to your widget (e.g., to navigate to a detailed view), you can provide a `link` object with the following properties:
 
-| Property | Type                | Description                                    | Required |
-|----------|---------------------|------------------------------------------------|----------|
-| `label`  | `MessageDescriptor` | The text to display for the link               | Yes      |
-| `href`   | `string`            | The URL where the link should navigate to      | Yes      |
+| Property | Type                | Description                               | Required |
+| -------- | ------------------- | ----------------------------------------- | -------- |
+| `label`  | `MessageDescriptor` | The text to display for the link          | Yes      |
+| `href`   | `string`            | The URL where the link should navigate to | Yes      |
 
 ### Creating a widget component
 
-Widget components should be designed to display content in a compact and informative way. 
+Widget components should be designed to display content in a compact and informative way.
 
 Here's how to implement a basic widget component:
 
@@ -313,11 +299,9 @@ export default MyWidget;
 </TabItem>
 </Tabs>
 
-:::tip
-For simplicity, the example below uses data fetching directly inside a useEffect hook. While this works for demonstration purposes, it may not reflect best practices in production.
+:::tip For simplicity, the example below uses data fetching directly inside a useEffect hook. While this works for demonstration purposes, it may not reflect best practices in production.
 
-For more robust solutions, consider alternative approaches recommended in the [React documentation](https://react.dev/learn/build-a-react-app-from-scratch#data-fetching). If you're looking to integrate a data fetching library, we recommend using [TanStackQuery](https://tanstack.com/query/v3/).
-:::
+For more robust solutions, consider alternative approaches recommended in the [React documentation](https://react.dev/learn/build-a-react-app-from-scratch#data-fetching). If you're looking to integrate a data fetching library, we recommend using [TanStackQuery](https://tanstack.com/query/v3/). :::
 
 **Data management**:
 
@@ -329,22 +313,20 @@ The green box above represents the area where the user’s React component (from
 
 Strapi provides several helper components to maintain a consistent user experience across widgets:
 
-| Component        | Description                                         | Usage                                |
-|------------------|-----------------------------------------------------|--------------------------------------|
-| `Widget.Loading` | Displays a loading spinner and message              | When data is being fetched           |
-| `Widget.Error`   | Displays an error state                             | When an error occurs                 |
-| `Widget.NoData`  | Displays when no data is available                  | When the widget has no data to show  |
+| Component              | Description                                   | Usage                                  |
+| ---------------------- | --------------------------------------------- | -------------------------------------- |
+| `Widget.Loading`       | Displays a loading spinner and message        | When data is being fetched             |
+| `Widget.Error`         | Displays an error state                       | When an error occurs                   |
+| `Widget.NoData`        | Displays when no data is available            | When the widget has no data to show    |
 | `Widget.NoPermissions` | Displays when user lacks required permissions | When the user cannot access the widget |
 
-These components help maintain a consistent look and feel across different widgets.
-You could render these components without children to get the default wording: `<Widget.Error />`
-or you could pass children to override the default copy and specify your own wording: `<Widget.Error>Your custom error message</Widget.Error>`.
+These components help maintain a consistent look and feel across different widgets. You could render these components without children to get the default wording: `<Widget.Error />` or you could pass children to override the default copy and specify your own wording: `<Widget.Error>Your custom error message</Widget.Error>`.
 
 ## Example: Adding a content metrics widget
 
 The following is a complete example of how to create a content metrics widget that displays the number of entries for each content type in your Strapi application.
 
-The end result will look like the following in your admin panel's <Icon name="house" /> Homepage:
+The end result will look like the following in your admin panel's <Icon name="house" />Homepage:
 
 <ThemedImage
   alt="Billing tab of Profile page"
@@ -359,11 +341,10 @@ The widget shows counts for example content-types automatically generated by Str
 This widget can be added to Strapi by:
 
 1. creating a "content-metrics" plugin (see [plugin creation](/cms/plugins-development/create-a-plugin) documentation for details)
+
 2. re-using the code examples provided below.
 
-:::tip
-If you prefer a hands-on approach, you can reuse the following <ExternalLink to="https://codesandbox.io/p/sandbox/github/pwizla/strapi-custom-widget-content-metrics" text="CodeSandbox link" />.
-:::
+:::tip If you prefer a hands-on approach, you can reuse the following <ExternalLink to="https://codesandbox.io/p/sandbox/github/pwizla/strapi-custom-widget-content-metrics" text="CodeSandbox link" />. :::
 
 <Tabs groupId="js-ts">
 <TabItem value="javascript" label="JavaScript">
