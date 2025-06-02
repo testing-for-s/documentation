@@ -8,7 +8,7 @@ The Homepagea is the landing page of the Strapi admin panel. By default, it prov
 
 * *Last published entries*: Shows recently published content entries, allowing you to quickly access and manage your published content.
 
-\<ThemedImage alt="Homepage with default widgets" sources={{ light: '/img/assets/admin-homepage/admin-panel-homepage.png', dark: '/img/assets/admin-homepage/admin-panel-homepage\_DARK.png', }} />
+<ThemedImage alt="Homepage with default widgets" sources={{ light: '/img/assets/admin-homepage/admin-panel-homepage.png', dark: '/img/assets/admin-homepage/admin-panel-homepage\_DARK.png', }} />
 
 These default widgets cannot currently be removed, but you can customize the Homepage by creating your own widgets.
 
