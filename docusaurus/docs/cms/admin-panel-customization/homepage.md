@@ -1,12 +1,14 @@
 ---
 title: Homepage customization
-description: Learn about the Strapi admin panel Homepage and how to customize it with widgets.
+description: >-
+  Learn about the Strapi admin panel Homepage and how to customize it with
+  widgets.
 toc_max_heading_level: 6
 tags:
-- admin panel
-- homepage
-- widgets
-- features
+  - admin panel
+  - homepage
+  - widgets
+  - features
 ---
 
 # Homepage customization
@@ -40,17 +42,36 @@ To add a custom widget, you can:
 
 The present page will describe how to create and register your widgets.
 
+### Understanding widget placement and structure
+
+Custom widgets appear on the Homepage alongside the default widgets. When you register a widget, Strapi automatically handles the placement and renders it within the consistent admin panel design system. Each widget is displayed in a card-like container with:
+
+- A header section containing the widget icon and title
+- An optional link (if provided) that appears in the header
+- The main content area where your custom React component is rendered
+- Consistent spacing and styling that matches the admin panel's design
+
+This ensures that all widgets, whether built-in or custom, maintain visual consistency and provide a cohesive user experience.
+
 ### Registering custom widgets
 
 To register a widget, use `app.widgets.register()`:
 
-- in the plugin’s [`register` lifecycle method](/cms/plugins-development/server-api#register) of the `index` file if you're building a plugin (recommended way),
+- in the plugin's [`register` lifecycle method](/cms/plugins-development/server-api#register) of the `index` file if you're building a plugin (recommended way),
 - or in the [application's global `register()` lifecycle method](/cms/configurations/functions#register) if you're adding the widget to just one Strapi application without a plugin.
 
 :::info
 The examples on the present page will cover registering a widget through a plugin. Most of the code should be reusable if you register the widget in the application's global `register()` lifecycle method, except you should not pass the `pluginId` property.
 :::
 
+#### Widget registration workflow
+
+The widget registration process follows these steps:
+
+1. **Registration Phase**: During the plugin's `register` lifecycle, your widget configuration is stored in Strapi's widget registry
+2. **Component Loading**: The widget component is loaded asynchronously when the Homepage is accessed
+3. **Rendering**: Strapi renders your widget within its design system, applying consistent styling and layout
+4. **Permission Checking**: If permissions are specified, Strapi checks user permissions before displaying the widget
 
 <Tabs groupId="js-ts">
 <TabItem value="javascript" label="JavaScript">
@@ -181,6 +202,16 @@ If you want to add a link to your widget (e.g., to navigate to a detailed view),
 |----------|---------------------|------------------------------------------------|----------|
 | `label`  | `MessageDescriptor` | The text to display for the link               | Yes      |
 | `href`   | `string`            | The URL where the link should navigate to      | Yes      |
+
+#### Best practices for widget configuration
+
+When configuring your widgets, consider these recommendations:
+
+- **Unique IDs**: Ensure your widget `id` is unique across all plugins to avoid conflicts
+- **Descriptive titles**: Use clear, descriptive titles that help users understand the widget's purpose
+- **Appropriate icons**: Choose icons that visually represent your widget's functionality (you can use icons from `@strapi/icons`)
+- **Permissions**: If your widget displays sensitive data, specify appropriate permissions to control access
+- **Plugin namespace**: Always include the `pluginId` when registering from a plugin to maintain proper organization
 
 ### Creating a widget component
 
@@ -319,11 +350,21 @@ For simplicity, the example below uses data fetching directly inside a useEffect
 For more robust solutions, consider alternative approaches recommended in the [React documentation](https://react.dev/learn/build-a-react-app-from-scratch#data-fetching). If you're looking to integrate a data fetching library, we recommend using [TanStackQuery](https://tanstack.com/query/v3/).
 :::
 
+#### Widget component architecture
+
+Understanding how your widget component fits into the overall admin panel structure is crucial for creating effective widgets:
+
 **Data management**:
 
 ![Rendering and Data management](/img/assets/homepage-customization/rendering-data-management.png)
 
-The green box above represents the area where the user’s React component (from `widget.component` in the [API](#widget-api-reference)) is rendered. You can render whatever you like inside of this box. Everything outside that box is, however, rendered by Strapi. This ensures overall design consistency within the admin panel. The `icon`, `title`, and `link` (optional) properties provided in the API are used to display the widget.
+The green box above represents the area where the user's React component (from `widget.component` in the [API](#widget-api-reference)) is rendered. You can render whatever you like inside of this box. Everything outside that box is, however, rendered by Strapi. This ensures overall design consistency within the admin panel. The `icon`, `title`, and `link` (optional) properties provided in the API are used to display the widget.
+
+**Component responsibilities:**
+
+- **Your Component**: Handles data fetching, state management, and content rendering within the designated area
+- **Strapi Framework**: Manages the widget container, header, styling, permissions, and overall layout consistency
+- **Design System Integration**: Strapi automatically applies consistent spacing, colors, and responsive behavior
 
 #### Widget helper components reference
 
@@ -340,6 +381,16 @@ These components help maintain a consistent look and feel across different widge
 You could render these components without children to get the default wording: `<Widget.Error />`
 or you could pass children to override the default copy and specify your own wording: `<Widget.Error>Your custom error message</Widget.Error>`.
 
+#### Widget development tips
+
+When developing widgets, consider these practical recommendations:
+
+- **Responsive Design**: Your widget content should work well in different screen sizes since the admin panel is responsive
+- **Performance**: Use lazy loading and efficient data fetching to avoid impacting the Homepage load time
+- **Error Handling**: Always implement proper error handling and use the provided helper components for consistent user experience
+- **Accessibility**: Ensure your widget content is accessible, following web accessibility standards
+- **Testing**: Test your widget with different data states (loading, error, empty, populated) to ensure robust behavior
+
 ## Example: Adding a content metrics widget
 
 The following is a complete example of how to create a content metrics widget that displays the number of entries for each content type in your Strapi application.
@@ -347,7 +398,7 @@ The following is a complete example of how to create a content metrics widget th
 The end result will look like the following in your admin panel's <Icon name="house" /> Homepage:
 
 <ThemedImage
-  alt="Billing tab of Profile page"
+  alt="Content metrics widget showing entry counts"
   sources={{
       light: '/img/assets/homepage-customization/content-metrics-widget.png',
       dark: '/img/assets/homepage-customization/content-metrics-widget_DARK.png',
@@ -364,6 +415,15 @@ This widget can be added to Strapi by:
 :::tip
 If you prefer a hands-on approach, you can reuse the following <ExternalLink to="https://codesandbox.io/p/sandbox/github/pwizla/strapi-custom-widget-content-metrics" text="CodeSandbox link" />.
 :::
+
+### Complete implementation walkthrough
+
+This example demonstrates the full stack implementation of a custom widget, including:
+
+- **Frontend component**: React component that displays content metrics
+- **Backend controller**: Server-side logic to count content entries
+- **API route**: Custom endpoint to serve the metrics data
+- **Plugin integration**: How everything connects within a Strapi plugin
 
 <Tabs groupId="js-ts">
 <TabItem value="javascript" label="JavaScript">
@@ -772,3 +832,15 @@ export default {
 
 </TabItem>
 </Tabs>
+
+### Understanding the implementation flow
+
+This example demonstrates a complete data flow from frontend to backend:
+
+1. **Widget Registration**: The plugin registers the widget during the admin panel initialization
+2. **Component Rendering**: When users visit the Homepage, Strapi loads and renders the MetricsWidget component
+3. **Data Fetching**: The component makes an API call to `/api/content-metrics/count`
+4. **Server Processing**: The custom controller processes the request, counts content entries, and returns the data
+5. **UI Update**: The component receives the data and renders it using Strapi's design system components
+
+This pattern can be adapted for various types of widgets that need to display custom data or metrics from your Strapi application.
