@@ -1,12 +1,14 @@
 ---
 title: Homepage customization
-description: Learn about the Strapi admin panel Homepage and how to customize it with widgets.
+description: >-
+  Learn about the Strapi admin panel Homepage and how to customize it with
+  widgets.
 toc_max_heading_level: 6
 tags:
-- admin panel
-- homepage
-- widgets
-- features
+  - admin panel
+  - homepage
+  - widgets
+  - features
 ---
 
 # Homepage customization
@@ -44,7 +46,7 @@ The present page will describe how to create and register your widgets.
 
 To register a widget, use `app.widgets.register()`:
 
-- in the plugin’s [`register` lifecycle method](/cms/plugins-development/server-api#register) of the `index` file if you're building a plugin (recommended way),
+- in the plugin's [`register` lifecycle method](/cms/plugins-development/server-api#register) of the `index` file if you're building a plugin (recommended way),
 - or in the [application's global `register()` lifecycle method](/cms/configurations/functions#register) if you're adding the widget to just one Strapi application without a plugin.
 
 :::info
@@ -323,7 +325,7 @@ For more robust solutions, consider alternative approaches recommended in the [R
 
 ![Rendering and Data management](/img/assets/homepage-customization/rendering-data-management.png)
 
-The green box above represents the area where the user’s React component (from `widget.component` in the [API](#widget-api-reference)) is rendered. You can render whatever you like inside of this box. Everything outside that box is, however, rendered by Strapi. This ensures overall design consistency within the admin panel. The `icon`, `title`, and `link` (optional) properties provided in the API are used to display the widget.
+The green box above represents the area where the user's React component (from `widget.component` in the [API](#widget-api-reference)) is rendered. You can render whatever you like inside of this box. Everything outside that box is, however, rendered by Strapi. This ensures overall design consistency within the admin panel. The `icon`, `title`, and `link` (optional) properties provided in the API are used to display the widget.
 
 #### Widget helper components reference
 
@@ -340,6 +342,163 @@ These components help maintain a consistent look and feel across different widge
 You could render these components without children to get the default wording: `<Widget.Error />`
 or you could pass children to override the default copy and specify your own wording: `<Widget.Error>Your custom error message</Widget.Error>`.
 
+### Adding a widget to the sidebar navigation
+
+While widgets are displayed on the Homepage, you may also want to add a corresponding navigation item to the admin panel's sidebar. This is particularly useful when your widget provides a summary view and you want to link to a more detailed page.
+
+#### Creating a sidebar navigation item
+
+To add a sidebar navigation item for your widget's detailed view, use the `app.addMenuLink()` method in your plugin's register function:
+
+<Tabs groupId="js-ts">
+<TabItem value="javascript" label="JavaScript">
+
+```jsx title="src/plugins/my-plugin/admin/src/index.js"
+import pluginId from './pluginId';
+import MyWidgetIcon from './components/MyWidgetIcon';
+import MyPluginIcon from './components/MyPluginIcon';
+
+export default {
+  register(app) {
+    // Register the plugin itself
+    app.registerPlugin({
+      id: pluginId,
+      name: 'My Plugin',
+    });
+    
+    // Add a sidebar navigation link
+    app.addMenuLink({
+      to: `plugins/${pluginId}`,
+      icon: MyPluginIcon,
+      intlLabel: {
+        id: `${pluginId}.plugin.name`,
+        defaultMessage: 'My Plugin Dashboard',
+      },
+      Component: async () => {
+        const { DetailedView } = await import('./pages/DetailedView');
+        return DetailedView;
+      },
+    });
+    
+    // Register the Homepage widget
+    app.widgets.register({
+      icon: MyWidgetIcon,
+      title: {
+        id: `${pluginId}.widget.title`,
+        defaultMessage: 'My Widget',
+      },
+      component: async () => {
+        const component = await import('./components/MyWidget');
+        return component.default;
+      },
+      // Add a link from the widget to the detailed view
+      link: {
+        label: {
+          id: `${pluginId}.widget.link.label`,
+          defaultMessage: 'View Details',
+        },
+        href: `plugins/${pluginId}`,
+      },
+      id: 'my-custom-widget',
+      pluginId: pluginId,
+    });
+  },
+  
+  bootstrap() {},
+  // ...
+};
+```
+
+</TabItem>
+
+<TabItem value="typescript" label="TypeScript">
+
+```tsx title="src/plugins/my-plugin/admin/src/index.ts"
+import pluginId from './pluginId';
+import MyWidgetIcon from './components/MyWidgetIcon';
+import MyPluginIcon from './components/MyPluginIcon';
+import type { StrapiApp } from '@strapi/admin/strapi-admin';
+
+export default {
+  register(app: StrapiApp) {
+    // Register the plugin itself
+    app.registerPlugin({
+      id: pluginId,
+      name: 'My Plugin',
+    });
+    
+    // Add a sidebar navigation link
+    app.addMenuLink({
+      to: `plugins/${pluginId}`,
+      icon: MyPluginIcon,
+      intlLabel: {
+        id: `${pluginId}.plugin.name`,
+        defaultMessage: 'My Plugin Dashboard',
+      },
+      Component: async () => {
+        const { DetailedView } = await import('./pages/DetailedView');
+        return DetailedView;
+      },
+    });
+    
+    // Register the Homepage widget
+    app.widgets.register({
+      icon: MyWidgetIcon,
+      title: {
+        id: `${pluginId}.widget.title`,
+        defaultMessage: 'My Widget',
+      },
+      component: async () => {
+        const component = await import('./components/MyWidget');
+        return component.default;
+      },
+      // Add a link from the widget to the detailed view
+      link: {
+        label: {
+          id: `${pluginId}.widget.link.label`,
+          defaultMessage: 'View Details',
+        },
+        href: `plugins/${pluginId}`,
+      },
+      id: 'my-custom-widget',
+      pluginId: pluginId,
+    });
+  },
+  
+  bootstrap() {},
+  // ...
+};
+```
+
+</TabItem>
+</Tabs>
+
+#### Sidebar navigation API reference
+
+The `app.addMenuLink()` method accepts the following properties:
+
+| Property    | Type                   | Description                                           | Required |
+|-------------|------------------------|-------------------------------------------------------|----------|
+| `to`        | `string`               | The route path for navigation                         | Yes      |
+| `icon`      | `React.ComponentType`  | Icon component to display in the sidebar             | Yes      |
+| `intlLabel` | `MessageDescriptor`    | Label for the menu item with translation support     | Yes      |
+| `Component` | `() => Promise<React.ComponentType>` | Async function that returns the page component | Yes      |
+| `permissions` | `Permission[]`       | Permissions required to see the menu item             | No       |
+
+#### Best practices for widget-sidebar integration
+
+When creating widgets with corresponding sidebar navigation:
+
+1. **Consistent iconography**: Use the same or related icons for both the widget and sidebar item to maintain visual consistency.
+
+2. **Clear navigation flow**: The widget should provide a summary or overview, while the sidebar link leads to a more detailed view.
+
+3. **Meaningful link text**: Use descriptive link text in the widget that clearly indicates what users will find when they navigate to the detailed view.
+
+4. **Permission consistency**: Apply the same permission checks to both the widget and the corresponding sidebar navigation to ensure consistent access control.
+
+5. **Responsive design**: Ensure both the widget content and the detailed page work well across different screen sizes.
+
 ## Example: Adding a content metrics widget
 
 The following is a complete example of how to create a content metrics widget that displays the number of entries for each content type in your Strapi application.
@@ -347,7 +506,7 @@ The following is a complete example of how to create a content metrics widget th
 The end result will look like the following in your admin panel's <Icon name="house" /> Homepage:
 
 <ThemedImage
-  alt="Billing tab of Profile page"
+  alt="Content metrics widget showing counts for different content types"
   sources={{
       light: '/img/assets/homepage-customization/content-metrics-widget.png',
       dark: '/img/assets/homepage-customization/content-metrics-widget_DARK.png',
