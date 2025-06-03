@@ -91,7 +91,7 @@ const sidebars = {
           label: 'Preview',
           id: 'cms/features/preview',
           customProps: {
-            new: true,
+            new: false,
           }
         },
         {
@@ -181,7 +181,7 @@ const sidebars = {
           label: 'Strapi Client',
           id: 'cms/api/client',
           customProps: {
-            new: true,
+            new: false,
           }
         },
         'cms/api/graphql',
@@ -290,6 +290,9 @@ const sidebars = {
           collapsed: true,
           collapsible: true,
           label: "Database",
+          customProps: {
+            updated: false,
+          },
           items: [
             {
               type: 'doc',
@@ -399,7 +402,7 @@ const sidebars = {
           label: 'Homepage customization',
           id: 'cms/admin-panel-customization/homepage',
           customProps: {
-            new: true,
+            new: false,
           }
         },
         // 'cms/cli', // TODO moved to its own category, add TOC component here to highlight it
