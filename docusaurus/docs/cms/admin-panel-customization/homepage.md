@@ -1,12 +1,14 @@
 ---
 title: Homepage customization
-description: Learn about the Strapi admin panel Homepage and how to customize it with widgets.
+description: >-
+  Learn about the Strapi admin panel Homepage and how to customize it with
+  widgets.
 toc_max_heading_level: 6
 tags:
-- admin panel
-- homepage
-- widgets
-- features
+  - admin panel
+  - homepage
+  - widgets
+  - features
 ---
 
 # Homepage customization
@@ -44,7 +46,7 @@ The present page will describe how to create and register your widgets.
 
 To register a widget, use `app.widgets.register()`:
 
-- in the plugin’s [`register` lifecycle method](/cms/plugins-development/server-api#register) of the `index` file if you're building a plugin (recommended way),
+- in the plugin's [`register` lifecycle method](/cms/plugins-development/server-api#register) of the `index` file if you're building a plugin (recommended way),
 - or in the [application's global `register()` lifecycle method](/cms/configurations/functions#register) if you're adding the widget to just one Strapi application without a plugin.
 
 :::info
@@ -323,7 +325,7 @@ For more robust solutions, consider alternative approaches recommended in the [R
 
 ![Rendering and Data management](/img/assets/homepage-customization/rendering-data-management.png)
 
-The green box above represents the area where the user’s React component (from `widget.component` in the [API](#widget-api-reference)) is rendered. You can render whatever you like inside of this box. Everything outside that box is, however, rendered by Strapi. This ensures overall design consistency within the admin panel. The `icon`, `title`, and `link` (optional) properties provided in the API are used to display the widget.
+The green box above represents the area where the user's React component (from `widget.component` in the [API](#widget-api-reference)) is rendered. You can render whatever you like inside of this box. Everything outside that box is, however, rendered by Strapi. This ensures overall design consistency within the admin panel. The `icon`, `title`, and `link` (optional) properties provided in the API are used to display the widget.
 
 #### Widget helper components reference
 
@@ -340,6 +342,40 @@ These components help maintain a consistent look and feel across different widge
 You could render these components without children to get the default wording: `<Widget.Error />`
 or you could pass children to override the default copy and specify your own wording: `<Widget.Error>Your custom error message</Widget.Error>`.
 
+### Widget visibility in admin panel
+
+Once registered, widgets appear on the admin panel's <Icon name="house" /> Homepage alongside the default widgets. The widgets are displayed in a grid layout, with each widget showing:
+
+- The provided icon next to the widget title
+- The widget title as specified in the `title` property
+- The content rendered by your widget component
+- An optional link (if provided) that appears as a clickable element within the widget
+
+#### Widget placement and ordering
+
+Custom widgets are displayed after the default widgets (_Last edited entries_ and _Last published entries_). The order of custom widgets depends on the order in which they are registered. If multiple plugins register widgets, they will appear in the order the plugins are loaded.
+
+#### Widget permissions and access control
+
+If you specify `permissions` in your widget configuration, Strapi will automatically handle the visibility of your widget based on the current user's permissions. Users who don't have the required permissions will not see the widget on their homepage.
+
+```jsx
+// Example: Widget only visible to users with specific permissions
+app.widgets.register({
+  // ... other properties
+  permissions: [
+    {
+      action: 'plugin::my-plugin.read',
+      subject: null,
+    },
+  ],
+});
+```
+
+#### Widget responsiveness
+
+Widgets automatically adapt to different screen sizes. On smaller screens, the widget grid adjusts to display fewer widgets per row, ensuring a consistent user experience across devices.
+
 ## Example: Adding a content metrics widget
 
 The following is a complete example of how to create a content metrics widget that displays the number of entries for each content type in your Strapi application.
@@ -347,7 +383,7 @@ The following is a complete example of how to create a content metrics widget th
 The end result will look like the following in your admin panel's <Icon name="house" /> Homepage:
 
 <ThemedImage
-  alt="Billing tab of Profile page"
+  alt="Content metrics widget showing entry counts"
   sources={{
       light: '/img/assets/homepage-customization/content-metrics-widget.png',
       dark: '/img/assets/homepage-customization/content-metrics-widget_DARK.png',
