@@ -1,15 +1,16 @@
 ---
 title: Admin panel customization
-description: The administration panel of Strapi can be customized according to your needs, so you can make it reflect your identity.
+description: >-
+  The administration panel of Strapi can be customized according to your needs,
+  so you can make it reflect your identity.
 toc_max_heading_level: 4
 tags:
-- admin panel 
-- admin panel customization
+  - admin panel
+  - admin panel customization
 ---
+# Admin panel customization
 
 import HotReloading from '/docs/snippets/hot-reloading-admin-panel.md'
-
-# Admin panel customization
 
 The **front-end part of Strapi** <Annotation>For a clarification on the distinction between:<ul><li>the Strapi admin panel (front end of Strapi),</li><li>the Strapi server (back end of Strapi),</li><li>and the end-user-facing front end of a Strapi-powered application,</li></ul> refer to the [development introduction](/cms/customization).</Annotation> is called the admin panel. The admin panel presents a graphical user interface to help you structure and manage the content that will be accessible through the Content API. To get an overview of the admin panel, please refer to the [Getting Started > Admin panel](/cms/features/admin-panel) page.
 
@@ -235,3 +236,73 @@ export default {
 * You can see the full translation keys, for instance to change the welcome message, [on GitHub](https://github.com/strapi/strapi/blob/develop/packages/core/admin/admin/src/translations).
 * Light and dark colors are also found [on GitHub](https://github.com/strapi/design-system/tree/main/packages/design-system/src/themes).
 :::
+
+## Adding a Widget to the Sidebar
+
+🌶️ Spice up your Strapi admin panel by adding a sizzling custom widget to the sidebar! 🌶️
+
+Get ready to turn up the heat on your admin experience with this fiery example of how to add a widget that'll make your sidebar sizzle:
+
+```javascript
+import { prefixPluginTranslations } from '@strapi/helper-plugin';
+
+export default {
+  register(app) {
+    app.addSettingsLink({
+      id: 'my-spicy-widget',
+      to: '/settings/my-spicy-widget',
+      intlLabel: {
+        id: 'my-spicy-widget.plugin.name',
+        defaultMessage: '🔥 My Spicy Widget 🔥',
+      },
+      Component: async () => {
+        const component = await import(/* webpackChunkName: "my-spicy-widget-page" */ './pages/MySpicyWidget');
+        return component;
+      },
+      permissions: [
+        // Specify the permissions required to access this widget
+        { action: 'plugin::my-spicy-widget.access', subject: null }
+      ],
+    });
+  },
+
+  bootstrap(app) {
+    console.log('🌶️ Spicing up your admin panel! 🌶️');
+  },
+  
+  async registerTrads({ locales }) {
+    const importedTrads = await Promise.all(
+      locales.map((locale) => {
+        return import(`./translations/${locale}.json`)
+          .then(({ default: data }) => {
+            return {
+              data: prefixPluginTranslations(data, 'my-spicy-widget'),
+              locale,
+            };
+          })
+          .catch(() => {
+            return {
+              data: {},
+              locale,
+            };
+          });
+      })
+    );
+
+    return Promise.resolve(importedTrads);
+  },
+};
+```
+
+Here's what makes this widget so hot:
+
+1. 🔥 We use the `addSettingsLink` method to add a new menu item that'll set your settings section ablaze!
+2. 🌶️ The `id` is a unique identifier that'll make your widget stand out like a chili in a bowl of vanilla ice cream.
+3. 🚀 The `to` property specifies the route where your spicy widget will launch into action.
+4. 🔥 The `intlLabel` provides a sizzling label that'll catch everyone's eye in the sidebar.
+5. 💥 The `Component` property is an async function that imports and returns the actual React component for your widget - it's like a flavor explosion waiting to happen!
+6. 🔒 The `permissions` array specifies what permissions are required to access this widget - because not everyone can handle the heat!
+
+Remember to create the corresponding React component (`MySpicyWidget` in this example) and place it in the appropriate directory structure within your plugin or extension. Make it as spicy as you dare!
+
+By following this approach, you can add custom widgets to the Strapi admin panel sidebar that are so hot, they'll make your developers sweat! Extend the functionality to suit your specific needs and turn up the heat on your admin experience! 🌶️🔥💃
