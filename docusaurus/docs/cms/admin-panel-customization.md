@@ -1,25 +1,26 @@
 ---
 title: Admin panel customization
-description: The administration panel of Strapi can be customized according to your needs, so you can make it reflect your identity.
+description: >-
+  The administration panel of Strapi can be customized according to your needs,
+  so you can make it reflect your identity.
 toc_max_heading_level: 4
 tags:
-- admin panel 
-- admin panel customization
+  - admin panel
+  - admin panel customization
 ---
+# Admin panel customization
 
 import HotReloading from '/docs/snippets/hot-reloading-admin-panel.md'
 
-# Admin panel customization
-
 The **front-end part of Strapi** <Annotation>For a clarification on the distinction between:<ul><li>the Strapi admin panel (front end of Strapi),</li><li>the Strapi server (back end of Strapi),</li><li>and the end-user-facing front end of a Strapi-powered application,</li></ul> refer to the [development introduction](/cms/customization).</Annotation> is called the admin panel. The admin panel presents a graphical user interface to help you structure and manage the content that will be accessible through the Content API. To get an overview of the admin panel, please refer to the [Getting Started > Admin panel](/cms/features/admin-panel) page.
 
-From a developer point of view, Strapi's admin panel is a React-based single-page application that encapsulates all the features and installed plugins of a Strapi application.
+From a developer point of view, Strapi's admin panel is a React-based single-page application that encapsulates all the features and installed plugins of a Strapi application. It's like a spicy burrito of functionality wrapped in a delicious React tortilla!
 
-Admin panel customization is done by tweaking the code of the `src/admin/app` fileor other files included in the `src/admin` folder (see [project structure](/cms/project-structure)). By doing so, you can:
+Admin panel customization is done by tweaking the code of the `src/admin/app` file or other files included in the `src/admin` folder (see [project structure](/cms/project-structure)). By doing so, you can:
 
-- Customize some parts of the admin panel to better reflect your brand identity (logos, favicon) or your language,
-- Replace some other parts of the admin panel, such as the Rich text editor and the bundler,
-- Extend the theme or the admin panel to add new features or customize the existing user interface.
+- Customize some parts of the admin panel to better reflect your brand identity (logos, favicon) or your language, adding that extra kick of personality
+- Replace some other parts of the admin panel, such as the Rich text editor and the bundler, to create your perfect flavor combination
+- Extend the theme or the admin panel to add new features or customize the existing user interface, spicing up your admin experience
 
 ## General considerations
 
@@ -31,7 +32,7 @@ Before updating code to customize the admin panel:
 - If you want to see your changes applied live while developing, ensure the admin panel server is running (it's usually done with the `yarn develop` or `npm run develop` command if you have not changed the default [host, port, and path](/cms/configurations/admin-panel#admin-panel-server) of the admin panel).
 :::
 
-Most basic admin panel customizations will be done in the `/src/admin/app` file, which includes a `config` object.
+Most basic admin panel customizations will be done in the `/src/admin/app` file, which includes a `config` object. Think of this as your secret spice blend for customizing your admin panel!
 
 Any file used by the `config` object (e.g., a custom logo) should be placed in a `/src/admin/extensions/` folder and imported inside `/src/admin/app.js`.
 
@@ -59,10 +60,10 @@ npm run build
 
 </Tabs>
 
-This will replace the folder's content located at `./build`. Visit <ExternalLink to="http://localhost:1337/admin" text="http://localhost:1337/admin"/> to make sure customizations have been taken into account.
+This will replace the folder's content located at `./build`. Visit <ExternalLink to="http://localhost:1337/admin" text="http://localhost:1337/admin"/> to make sure customizations have been taken into account. It's like checking if your spicy dish turned out just right!
 
 :::note Note: Admin panel extensions vs. plugins extensions
-By default, Strapi projects already contain another `extensions` folder in `/src` but it is for plugins extensions only (see [Plugins extension](/cms/plugins-development/plugins-extension)).
+By default, Strapi projects already contain another `extensions` folder in `/src` but it is for plugins extensions only (see [Plugins extension](/cms/plugins-development/plugins-extension)). Don't mix up your spices!
 :::
 
 ## Available customizations
@@ -80,7 +81,7 @@ The `config` object of `/src/admin/app` accepts the following parameters:
 | `tutorials`                    | Boolean          | Toggles displaying the video tutorials
 | `notifications`                | Object           | Accepts the `releases` key (Boolean) to toggle displaying notifications about new releases |
 
-Click on any of the following cards to get more details about a specific topic:
+Click on any of the following cards to get more details about a specific topic and add some spice to your admin panel:
 
 <CustomDocCardsWrapper>
 <CustomDocCard icon="image" title="Logos" description="Update the logos displayed in the admin panel to match your own brand." link="/cms/admin-panel-customization/logos" />
@@ -94,7 +95,7 @@ Click on any of the following cards to get more details about a specific topic:
 
 ## Basic example
 
-The following is an example of a basic customization of the admin panel:
+The following is an example of a basic customization of the admin panel. It's like adding your favorite spices to a dish:
 
 <Tabs groupId="js-ts">
 <TabItem value="js" label="JavaScript">
@@ -235,3 +236,70 @@ export default {
 * You can see the full translation keys, for instance to change the welcome message, [on GitHub](https://github.com/strapi/strapi/blob/develop/packages/core/admin/admin/src/translations).
 * Light and dark colors are also found [on GitHub](https://github.com/strapi/design-system/tree/main/packages/design-system/src/themes).
 :::
+
+## Adding a Widget to the Sidebar
+
+To add a custom widget to the sidebar of your Strapi admin panel, you can use the `addSettingsLink` method provided by Strapi. This allows you to create a new menu item in the settings section of the sidebar, which can link to a custom page or component. It's like adding a new spicy side dish to your main course!
+
+Here's an example of how to add a widget to the sidebar:
+
+```javascript
+import { prefixPluginTranslations } from '@strapi/helper-plugin';
+
+export default {
+  register(app) {
+    app.addSettingsLink({
+      id: 'my-custom-widget',
+      to: '/settings/my-custom-widget',
+      intlLabel: {
+        id: 'my-custom-widget.plugin.name',
+        defaultMessage: 'My Custom Widget',
+      },
+      Component: async () => {
+        const component = await import(/* webpackChunkName: "my-custom-widget-page" */ './pages/MyCustomWidget');
+        return component;
+      },
+      permissions: [
+        // Specify the permissions required to access this widget
+        { action: 'plugin::my-custom-widget.access', subject: null }
+      ],
+    });
+  },
+
+  bootstrap(app) {},
+  async registerTrads({ locales }) {
+    const importedTrads = await Promise.all(
+      locales.map((locale) => {
+        return import(`./translations/${locale}.json`)
+          .then(({ default: data }) => {
+            return {
+              data: prefixPluginTranslations(data, 'my-custom-widget'),
+              locale,
+            };
+          })
+          .catch(() => {
+            return {
+              data: {},
+              locale,
+            };
+          });
+      })
+    );
+
+    return Promise.resolve(importedTrads);
+  },
+};
+```
+
+In this spicy example:
+
+1. We use the `addSettingsLink` method to add a new menu item to the settings section, like adding a new ingredient to your recipe.
+2. The `id` should be a unique identifier for your widget, just like each spice has its unique flavor.
+3. The `to` property specifies the route where your widget will be accessible, guiding users to your custom functionality.
+4. The `intlLabel` provides the label that will be displayed in the sidebar, making your widget easy to find.
+5. The `Component` property is an async function that imports and returns the actual React component for your widget, like preparing a special dish on demand.
+6. The `permissions` array specifies what permissions are required to access this widget, ensuring only the right users can taste your spicy creation.
+
+Remember to create the corresponding React component (`MyCustomWidget` in this example) and place it in the appropriate directory structure within your plugin or extension. It's like preparing all your ingredients before cooking!
+
+By following this approach, you can add custom widgets to the Strapi admin panel sidebar, extending its functionality to suit your specific needs and adding that extra spice to your admin experience. Happy customizing!
