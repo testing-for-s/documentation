@@ -1,35 +1,141 @@
 ---
 title: Admin panel extension
-description: Learn more about extending Strapi's admin panel.
 displayed_sidebar: cmsSidebar
-toc_max_heading_level: 4
+description: Learn more about extending Strapi's admin panel.
 tags:
-- admin panel 
-- admin panel customization
-
+  - admin panel
+  - admin panel customization
+toc_max_heading_level: 4
 ---
 
-import HotReloading from '/docs/snippets/hot-reloading-admin-panel.md'
+# Extension
 
-# Admin panel extension
+The Extension feature allows you to customize various aspects of the Strapi admin panel, enhancing its functionality and appearance to better suit your project's needs.
 
-Strapi's [admin panel](/cms/admin-panel-customization) is a React-based single-page application that encapsulates all the features and installed plugins of a Strapi application. If the [customization options](/cms/admin-panel-customization#available-customizations) provided by Strapi are not enough for your use case, you will need to extend Strapi's admin panel.
+## Overview
 
-Extending Strapi's admin panel means leveraging its React foundation to adapt and enhance the interface and features according to the specific needs of your project, which might imply creating new components or adding new types of fields.
+Extensions provide a way to add new features, modify existing ones, or change the look and feel of the admin panel. This can be done by creating custom components, injecting new routes, or overriding default behaviors.
 
-There are 2 use cases where you might want to extend the admin panel:
+## Types of Extensions
 
-- As a Strapi plugin developer, you want to develop a Strapi plugin that extends the admin panel **everytime it's installed in any Strapi application**.
+There are several types of extensions you can create:
 
-  👉 This can be done by taking advantage of the [Admin Panel API for plugins](/cms/plugins-development/admin-panel-api).
+1. **UI Extensions**: Modify the appearance of the admin panel.
+2. **Feature Extensions**: Add new functionality to the admin panel.
+3. **Plugin Extensions**: Extend or override existing plugin behaviors.
 
-- As a Strapi developer, you want to develop a unique solution for a Strapi user who only needs to extend a specific instance of a Strapi application.
+## Creating an Extension
 
-  👉 This can be done by directly updating the `/src/admin/app` file, which can import any file located in `/src/admin/extensions`.
+To create an extension, you'll need to follow these general steps:
 
-:::strapi Additional resources
-* If you're searching for ways of replacing the default Rich text editor, please refer to the [corresponding page](/cms/admin-panel-customization/wysiwyg-editor).
-* The <ExternalLink to="https://design-system.strapi.io/?path=/docs/getting-started-welcome--docs" text="Strapi Design System documentation"/> also provide extensive additional information on developing for Strapi's admin panel.
-:::
+1. Create a new directory for your extension in the `./src/admin/extensions` folder.
+2. Implement your extension logic using React components and Strapi's API.
+3. Register your extension in the admin panel configuration.
 
-<HotReloading />
+### Example: Creating a Simple UI Extension
+
+Here's a basic example of how to create a UI extension that adds a custom welcome message to the admin panel:
+
+1. Create a new file `./src/admin/extensions/components/WelcomeMessage.js`:
+
+```javascript
+import React from 'react';
+import { Box, Typography } from '@strapi/design-system';
+
+const WelcomeMessage = () => {
+  return (
+    <Box padding={4} background="neutral100">
+      <Typography variant="beta">Welcome to your customized admin panel!</Typography>
+    </Box>
+  );
+};
+
+export default WelcomeMessage;
+```
+
+2. Register the extension in `./src/admin/app.js`:
+
+```javascript
+import WelcomeMessage from './extensions/components/WelcomeMessage';
+
+export default {
+  bootstrap(app) {
+    app.injectContentManagerComponent('HomePage', 'before-content', {
+      name: 'custom-welcome-message',
+      Component: WelcomeMessage,
+    });
+  },
+};
+```
+
+This example will inject a custom welcome message component at the top of the admin panel's homepage.
+
+## Best Practices
+
+When creating extensions, keep the following best practices in mind:
+
+1. **Performance**: Ensure your extensions don't negatively impact the admin panel's performance.
+2. **Consistency**: Try to maintain consistency with Strapi's existing design patterns and user experience.
+3. **Modularity**: Keep your extensions modular and focused on specific functionality.
+4. **Documentation**: Document your extensions well, especially if they're intended for use by other team members or the community.
+
+## Advanced Extension Techniques
+
+For more complex customizations, you can leverage Strapi's advanced extension capabilities:
+
+### Overriding Plugin Components
+
+You can override existing plugin components to change their behavior or appearance:
+
+```javascript
+export default {
+  bootstrap(app) {
+    app.overridePlugin('content-type-builder', 'components', {
+      'attribute-list': {
+        'list.deleteModalTitle': {
+          id: 'custom.attribute.delete.title',
+          defaultMessage: 'Are you sure you want to delete this field?',
+        },
+      },
+    });
+  },
+};
+```
+
+### Adding Custom API Endpoints
+
+For extensions that require backend functionality, you can add custom API endpoints:
+
+1. Create a new controller in `./src/api/custom-extension/controllers/custom-extension.js`:
+
+```javascript
+module.exports = {
+  async customAction(ctx) {
+    // Your custom logic here
+    ctx.body = { message: 'Custom action executed successfully' };
+  },
+};
+```
+
+2. Add a new route in `./src/api/custom-extension/routes/custom-extension.js`:
+
+```javascript
+module.exports = {
+  routes: [
+    {
+      method: 'GET',
+      path: '/custom-extension/action',
+      handler: 'custom-extension.customAction',
+      config: {
+        policies: [],
+      },
+    },
+  ],
+};
+```
+
+## Conclusion
+
+Extensions provide a powerful way to tailor the Strapi admin panel to your specific needs. By following the guidelines and examples provided in this documentation, you can create custom extensions that enhance the functionality and user experience of your Strapi application.
+
+For more detailed information on specific extension types and advanced usage, refer to the official Strapi plugin development documentation.
