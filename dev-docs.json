@@ -3,6 +3,6 @@
     "userDocsWorkflows": [
       "generateUserDocs"
     ],
-    "issues": true
+    "issues": false
   }
 }
