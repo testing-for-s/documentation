@@ -12,15 +12,7 @@ Strapi 5 brings many new features and improvements, and this page quickly highli
 
 <Icon name="magic-wand"/> The new **[Content History](/cms/features/content-history)** feature allows you to view and restore previous versions of your content from the Content Manager.
 
-<Icon name="eye" /> The new **[Preview](/cms/features/preview)** feature allows you to preview your content in your front end application directly from Strapi's admin panel.
-
-<Icon name="file"/> Strapi 5 now use **[documents](/cms/api/document)** and introduces a new **[Document Service API](/cms/api/document-service)** to replace the Entity Service API from v4, leveraging the new Draft & Publish system and paving the way for more upcoming features.
-
 <Icon name="detective"/> The **[REST API](/cms/api/rest)** and **[GraphQL API](/cms/api/graphql)** have been updated, with a simplified response data format for both and partial support for Relay-style queries for GraphQL.
-
-<Icon name="plugs" /> The **[Strapi Client](/cms/api/client)** library simplifies interactions with your Strapi back end, providing a way to fetch, create, update, and delete content.
-
-<Icon name="puzzle-piece" /> The **[Plugin SDK](/cms/plugins-development/plugin-sdk)** is a new CLI tool that helps you develop and publish Strapi plugins.
 
 <Icon name="escalator-up" /> Another whole new CLI **[upgrade tool](/cms/upgrade-tool)** will help you migrate to any patch, minor, and major version of Strapi, automating most of the common tasks through codemods.
 
